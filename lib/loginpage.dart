@@ -1,11 +1,41 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'adminpage.dart';
+import 'allusers.dart';
+import 'services/usermangement.dart';
+
+
+authorizeAccess(BuildContext context) {
+  FirebaseAuth.instance.currentUser().then((user) {
+    Firestore.instance.collection('/users')
+        .where('uid', isEqualTo: user.uid)
+        .getDocuments()
+        .then((docs) {
+      if (docs.documents[0].exists) {
+        if (docs.documents[0].data['role'] == 'admin') {
+          Navigator.of(context).push(
+              new MaterialPageRoute(
+                  builder: (BuildContext context) => AdminPage()));
+        }
+        else {
+          Navigator.of(context).push(
+              new MaterialPageRoute(
+                  builder: (BuildContext context) => AllUsersPage()));
+        }
+      }
+    });
+  });
+}
+
 
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
+
+
 
 class _LoginPageState extends State<LoginPage> {
   final formkey = new GlobalKey<FormState>();
@@ -29,7 +59,9 @@ class _LoginPageState extends State<LoginPage> {
           .signInWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
         print('Signed in as ${user.uid}');
-        Navigator.of(context).pushReplacementNamed('/dashboard');
+       // Navigator.of(context).pushReplacementNamed('/dashboard');
+
+        authorizeAccess(context);
       }).catchError((e) {
         print(e);
       });
@@ -40,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Flutter Auth'),
+        title: new Text('Gcf app'),
         centerTitle: true,
       ),
       body: Center(
@@ -86,6 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                       value.isEmpty ? 'Password is blank' : null,
                       onSaved: (value) => _password = value,
                     ),
+
                     SizedBox(height: 15.0),
                     new Padding(
                       padding: EdgeInsets.symmetric(vertical: 15.0),

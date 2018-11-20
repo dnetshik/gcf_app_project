@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'services/usermangement.dart';
 
 // import 'home_page.dart';
 
@@ -30,7 +31,8 @@ class _SignupPageState extends State<SignupPage> {
       FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
-        print('Signed in ${user.uid}');
+        //print('Signed in ${user.uid}');
+        UserManagement().storeNewuser(user, context);
         Navigator.of(context).pop();
         Navigator.of(context).pushReplacementNamed('/dashboard');
       }).catchError((e) {

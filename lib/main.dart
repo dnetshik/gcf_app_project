@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'loginpage.dart';
 import 'signuppage.dart';
 import 'homepage.dart';
+import 'uploadpicture.dart';
 
 void main() => runApp(new MyApp());
 
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/dashboard': (BuildContext context) => new DashboardPage(),
         '/landingpage': (BuildContext context) => new MyApp(),
-        '/signup': (BuildContext context) => new SignupPage()
+        '/signup': (BuildContext context) => new SignupPage(),
+        '/uploadpicture': (BuildContext context) => new UploadPicturePage(),
+
       },
     );
   }

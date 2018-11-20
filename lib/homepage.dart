@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'services/usermangement.dart';
+import 'allusers.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -8,6 +10,7 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  UserManagement userObj = new UserManagement();
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
