@@ -3,7 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'dart:async';
 import 'dart:io';
-
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 
@@ -42,7 +42,12 @@ class _UploadPicturePageState extends State<UploadPicturePage> {
   }
 
   Widget enableUpload() {
+
+      String filename = sampleImage.path;
+      List  splitFileName = filename.split("/");
+      String baseName = splitFileName.removeLast();
     return Container(
+
       child: Column(
         children: <Widget>[
           Image.file(sampleImage, height: 300.0, width: 300.0),
@@ -52,10 +57,9 @@ class _UploadPicturePageState extends State<UploadPicturePage> {
             textColor: Colors.white,
             color: Colors.blue,
             onPressed: () {
-              final StorageReference firebaseStorageRef =
-              FirebaseStorage.instance.ref().child('myimage.jpg');
-              final StorageUploadTask task =
-              firebaseStorageRef.putFile(sampleImage);
+              final StorageReference firebaseStorageRef = FirebaseStorage.instance.ref().child('images/$baseName');
+
+             final StorageUploadTask task = firebaseStorageRef.putFile(sampleImage);
 
             },
           )

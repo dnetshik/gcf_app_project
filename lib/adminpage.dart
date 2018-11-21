@@ -26,14 +26,8 @@ body: Center(
       color: Colors.red, style: BorderStyle.solid, width: 3.0),
   child: Text('Upload'),
   onPressed: () {
-    FirebaseAuth.instance.signOut().then((action) {
-      Navigator
-          .of(context)
-          .pushReplacementNamed('/uploadpicture');
-    }).catchError((e) {
-      print(e);
-    });
-  },
+    Navigator.of(context).pushReplacementNamed('/uploadpicture');
+  }
 ),),
     );
   }
