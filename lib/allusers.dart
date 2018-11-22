@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'addProj.dart';
 
 class AllUsersPage extends StatefulWidget {
   @override
@@ -13,6 +13,16 @@ class _AllUsersPageState extends State<AllUsersPage> {
       appBar: AppBar(
         title: Text('All Users'),
       ),
+      body: Center(
+        child: new OutlineButton(
+            borderSide: BorderSide(
+                color: Colors.red, style: BorderStyle.solid, width: 3.0),
+            child: Text('working'),
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pushReplacementNamed('/addProj');
+            }
+        ),),
     );
   }
 }

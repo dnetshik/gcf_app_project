@@ -4,6 +4,7 @@ import 'loginpage.dart';
 import 'signuppage.dart';
 import 'homepage.dart';
 import 'uploadpicture.dart';
+import 'addProj.dart';
 
 void main() => runApp(new MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/landingpage': (BuildContext context) => new MyApp(),
         '/signup': (BuildContext context) => new SignupPage(),
         '/uploadpicture': (BuildContext context) => new UploadPicturePage(),
+        '/addProj': (BuildContext context) => new DashboardPage2(),
 
       },
     );

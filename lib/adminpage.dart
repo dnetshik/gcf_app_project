@@ -20,6 +20,7 @@ class _AdminPageState extends State<AdminPage>
 
       ),
         drawer: addDrawer(context),
+
 body: Center(
   child: new OutlineButton(
   borderSide: BorderSide(

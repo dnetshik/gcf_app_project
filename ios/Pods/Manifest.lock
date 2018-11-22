@@ -35,6 +35,9 @@ PODS:
   - firebase_core (0.0.1):
     - Firebase/Core
     - Flutter
+  - firebase_database (0.0.1):
+    - Firebase/Database
+    - Flutter
   - firebase_storage (0.0.1):
     - Firebase/Storage
     - Flutter
@@ -154,6 +157,7 @@ DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
+  - firebase_database (from `.symlinks/plugins/firebase_database/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
@@ -190,6 +194,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_auth/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
+  firebase_database:
+    :path: ".symlinks/plugins/firebase_database/ios"
   firebase_storage:
     :path: ".symlinks/plugins/firebase_storage/ios"
   Flutter:
@@ -205,6 +211,7 @@ SPEC CHECKSUMS:
   Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
   firebase_auth: 27a5a77a032d557c18f8e223aaf8ec1368f6cdbc
   firebase_core: c96aa8b2fcf7f5167d32f22034f502f9304952b8
+  firebase_database: dd62ab9f71967c9011ce2fd03a89e762dcc364df
   firebase_storage: e34d30ff8bb57e691191b70e9d255ec2eba2351f
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
   FirebaseAuth: 504b198ceb3472dca5c65bb95544ea44cfc9439e
