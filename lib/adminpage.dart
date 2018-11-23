@@ -19,17 +19,27 @@ class _AdminPageState extends State<AdminPage>
 
 
       ),
-        drawer: addDrawer(context),
+ //       drawer: addDrawer(context),
 
-body: Center(
-  child: new OutlineButton(
-  borderSide: BorderSide(
-      color: Colors.red, style: BorderStyle.solid, width: 3.0),
-  child: Text('Upload'),
-  onPressed: () {
-    Navigator.of(context).pushReplacementNamed('/uploadpicture');
-  }
-),),
+//      body: Center(
+//        child: new OutlineButton(
+//            borderSide: BorderSide(
+//                color: Colors.red, style: BorderStyle.solid, width: 3.0),
+//            //child: Text('working'),
+//            onPressed: () {
+//              Navigator.of(context).pop();
+//              Navigator.of(context).pushReplacementNamed('/addProj');
+//            }
+//        ),),
+//body: Center(
+//  child: new OutlineButton(
+//  borderSide: BorderSide(
+//      color: Colors.red, style: BorderStyle.solid, width: 3.0),
+//  child: Text('Upload'),
+//  onPressed: () {
+//    Navigator.of(context).pushReplacementNamed('/uploadpicture');
+//  }
+//),),
     );
   }
 }

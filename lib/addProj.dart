@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'services/crud.dart';
 import 'utils/myprojects.dart';
 import 'dart:async';
+import 'utils/utils.dart';
 import 'package:firebase_database/firebase_database.dart';
 class DashboardPage2 extends StatefulWidget {
   @override
@@ -23,6 +24,17 @@ class ProjectDetails extends StatelessWidget
       appBar: AppBar(
         title: Text('Project details'),
       ),
+      body: Center(
+
+        child: new OutlineButton(
+            borderSide: BorderSide(
+                color: Colors.red, style: BorderStyle.solid, width: 3.0),
+            child: Text('Upload'),
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/uploadpicture');
+            }
+        )
+    ),
     );
   }
 }
@@ -30,6 +42,8 @@ class ProjectDetails extends StatelessWidget
 class _DashboardPage2State extends State<DashboardPage2> {
   String ProjectName;
   String ProjectDescription;
+  double Projectbudget;
+  String ProjectManager;
 
   QuerySnapshot Projects;
 
@@ -59,6 +73,24 @@ class _DashboardPage2State extends State<DashboardPage2> {
                     this.ProjectDescription = value;
                   },
                 ),
+                SizedBox(height: 5.0),
+                TextField(
+                  decoration: InputDecoration(hintText: 'Enter Project Manager'),
+
+                  onChanged: (value) {
+                    this.ProjectManager = value;
+                  },
+
+                ),
+                SizedBox(height: 5.0),
+                TextField(
+                  decoration: InputDecoration(hintText: 'Enter Project budget'),
+
+                  onChanged: (value) {
+                    this.Projectbudget = double.parse(value);
+                  },
+
+                ),
               ],
             ),
             actions: <Widget>[
@@ -70,6 +102,8 @@ class _DashboardPage2State extends State<DashboardPage2> {
                   ProjectObj.addData({
                     'projectname': this.ProjectName,
                     'projectdesc': this.ProjectDescription,
+                    'projectmanager': this.ProjectManager,
+                    'projectbudget': this.Projectbudget,
 
                   }).then((result) {
                     dialogTrigger(context);
@@ -114,11 +148,12 @@ class _DashboardPage2State extends State<DashboardPage2> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: AppBar(
-          title: Text('Dashboard'),
+          title: Text('Admin'),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.add),
@@ -138,10 +173,11 @@ class _DashboardPage2State extends State<DashboardPage2> {
             )
           ],
         ),
-        body: _carList());
+        drawer: addDrawer(context),
+        body: _ProjectList());
   }
 
-  Widget _carList() {
+  Widget _ProjectList() {
     if (Projects != null) {
       return ListView.builder(
         itemCount: Projects.documents.length,
@@ -150,9 +186,11 @@ class _DashboardPage2State extends State<DashboardPage2> {
           return new ListTile(
             title: Text(Projects.documents[i].data['projectname']),
             subtitle: Text(Projects.documents[i].data['projectdesc']),
+
             onTap: () {
               //Navigator.of(context).pop();
               Navigator.push(context, new MaterialPageRoute(builder: (context) => ProjectDetails(Projects.documents[i].data[i])));
+
             }
           );
         },
@@ -170,8 +208,9 @@ class ProjectD
 {
   String ProjectName;
   String Projectdesc;
-
-  ProjectD(this.ProjectName, this.Projectdesc);
+  String ProjectManager;
+  double Projectbudget;
+  ProjectD(this.ProjectName, this.Projectdesc, this.ProjectManager, this.Projectbudget);
 
 
 }

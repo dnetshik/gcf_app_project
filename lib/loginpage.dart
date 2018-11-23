@@ -5,6 +5,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'adminpage.dart';
 import 'allusers.dart';
 import 'services/usermangement.dart';
+import 'addProj.dart';
+
 
 
 authorizeAccess(BuildContext context) {
@@ -17,13 +19,17 @@ authorizeAccess(BuildContext context) {
         if (docs.documents[0].data['role'] == 'admin') {
           Navigator.of(context).push(
               new MaterialPageRoute(
-                  builder: (BuildContext context) => AdminPage()));
+                  builder: (BuildContext context) => DashboardPage2()));
         }
-        else {
+        else if(docs.documents[0].data['role'] == 'user') {
           Navigator.of(context).push(
               new MaterialPageRoute(
                   builder: (BuildContext context) => AllUsersPage()));
         }
+        else
+          {
+            print("Not authorized");
+          }
       }
     });
   });
@@ -59,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
           .signInWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
         print('Signed in as ${user.uid}');
-       // Navigator.of(context).pushReplacementNamed('/dashboard');
+       //Navigator.of(context).pushReplacementNamed('/dashboard');
 
         authorizeAccess(context);
       }).catchError((e) {

@@ -65,6 +65,8 @@ class _UploadPicturePageState extends State<UploadPicturePage> {
           )
         ],
       ),
+
     );
+
   }
 }
