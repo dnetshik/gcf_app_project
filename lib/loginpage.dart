@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'adminpage.dart';
 import 'allusers.dart';
 import 'services/usermangement.dart';
 import 'addProj.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:email_validator/email_validator.dart';
 
 
 
@@ -35,13 +37,63 @@ authorizeAccess(BuildContext context) {
   });
 }
 
+//
+//class HandleLogin extends StatefulWidget {
+//
+//  @override
+//  _HandleLoginState createState() => _HandleLoginState();
+//
+//}
+//
+//class _HandleLoginState extends State<HandleLogin> {
+//  @override
+//  Widget build(BuildContext context) {
+//    // TODO: implement build
+//      Future<FirebaseUser> handleLogin(String email, String password) async {
+//    FirebaseUser user;
+//    try {
+//      user = await FirebaseAuth.instance.signInWithEmailAndPassword(
+//          email: email, password: password);
+//      print("done logging in");
+//      print(user.uid);
+//
+//      print("new user set");
+//      return user;
+//    } catch (err) {
+//      print(err.toString());
+//    }
+//    finally {
+//      if (user != null) {
+//        //Log in was successfull!
+//        setState(() {
+//          //FirebaseUser = user;
+//        });
+//      }
+//      else {
+//        //Log in was unsuccessfull!
+//      }
+//    }
+//  }
+//    return null;
+//  }
+//
+//
+//}
 
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
-
+String validateEmail(String value) {
+  Pattern pattern =
+      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+  RegExp regex = new RegExp(pattern);
+  if (!regex.hasMatch(value))
+    return 'Enter Valid Email';
+  else
+    return null;
+}
 
 class _LoginPageState extends State<LoginPage> {
   final formkey = new GlobalKey<FormState>();
@@ -73,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
       });
     }
   }
-
+final bool isvalidemail = false;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -99,17 +151,27 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     SizedBox(height: 15.0),
                     new TextFormField(
-                      decoration: InputDecoration(
-                        hintText: 'Email',
-                        contentPadding:
-                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                      ),
-                      validator: (value) =>
-                      value.isEmpty ? 'Email is blank' : null,
-                      onSaved: (value) => _email = value,
-                    ),
+                          decoration: const InputDecoration(labelText: 'Email'),
+                          keyboardType: TextInputType.emailAddress,
+                          validator: validateEmail,
+                          onSaved: (String val)
+                          {
+                          _email = val;
+                          }
+
+//                      decoration: InputDecoration(
+//                        hintText: 'Email',
+//                        contentPadding:
+//                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+//                        border: OutlineInputBorder(
+//                            borderRadius: BorderRadius.circular(20.0)),
+//                      ),
+////                      validator: (value) =>
+////                      value.isEmpty ? 'Email is blank' : null,
+////                      onSaved: (value) => _email = value,
+
+
+    ),
                     SizedBox(height: 15.0),
                     new TextFormField(
                       decoration: InputDecoration(

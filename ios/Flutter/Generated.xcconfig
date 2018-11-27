@@ -2,7 +2,6 @@
 FLUTTER_ROOT=/goinfre/dnetshik/Documents/flutter
 FLUTTER_APPLICATION_PATH=/goinfre/dnetshik/Desktop/upload_image
 FLUTTER_TARGET=/goinfre/dnetshik/Desktop/upload_image/lib/main.dart
-FLUTTER_BUILD_MODE=debug
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
 FLUTTER_FRAMEWORK_DIR=/goinfre/dnetshik/Documents/flutter/bin/cache/artifacts/engine/ios

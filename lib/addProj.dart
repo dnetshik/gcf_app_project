@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'services/crud.dart';
-import 'utils/myprojects.dart';
+
 import 'dart:async';
 import 'utils/utils.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -24,8 +24,8 @@ class ProjectDetails extends StatelessWidget
       appBar: AppBar(
         title: Text('Project details'),
       ),
-      body: Center(
 
+      body: Center(
         child: new OutlineButton(
             borderSide: BorderSide(
                 color: Colors.red, style: BorderStyle.solid, width: 3.0),
@@ -60,7 +60,6 @@ class _DashboardPage2State extends State<DashboardPage2> {
               children: <Widget>[
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Name'),
-
                   onChanged: (value) {
                     this.ProjectName = value;
                   },
@@ -111,6 +110,12 @@ class _DashboardPage2State extends State<DashboardPage2> {
                     print(e);
                   });
                 },
+              ),
+              FlatButton(
+                child: Text('Cancel'),
+                textColor: Colors.red,
+                onPressed: () => Navigator.pop(context),
+
               )
             ],
           );
@@ -124,7 +129,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Job Done', style: TextStyle(fontSize: 15.0)),
-            content: Text('Added'),
+            content: Text('Project Added'),
             actions: <Widget>[
               FlatButton(
                 child: Text('Alright'),
@@ -184,14 +189,14 @@ class _DashboardPage2State extends State<DashboardPage2> {
         padding: EdgeInsets.all(5.0),
         itemBuilder: (context, i) {
           return new ListTile(
-            title: Text(Projects.documents[i].data['projectname']),
-            subtitle: Text(Projects.documents[i].data['projectdesc']),
+              title: Text(Projects.documents[i].data['projectname']),
+              subtitle: Text(Projects.documents[i].data['projectdesc']),
 
-            onTap: () {
-              //Navigator.of(context).pop();
-              Navigator.push(context, new MaterialPageRoute(builder: (context) => ProjectDetails(Projects.documents[i].data[i])));
+              onTap: () {
+                //Navigator.of(context).pop();
+                Navigator.push(context, new MaterialPageRoute(builder: (context) => ProjectDetails(Projects.documents[i].data[i])));
 
-            }
+              }
           );
         },
       );
@@ -199,7 +204,6 @@ class _DashboardPage2State extends State<DashboardPage2> {
       return Text('Loading, Please wait..');
     }
   }
-
 
 }
 

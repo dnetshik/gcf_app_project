@@ -6,7 +6,18 @@ Drawer addDrawer(context){
         return new Drawer(
             child: new ListView(
             children: <Widget>[
-              new Text('Work')
+              new ListTile(
+                title: new Text('My Projects'),
+                trailing: new Icon(Icons.arrow_forward)
+              ),
+              new ListTile(
+                title: new Text('Assign user project'),
+                trailing: new Icon(Icons.arrow_forward)
+              ),
+              new ListTile(
+                  title: new Text('Close'),
+                  trailing: new Icon(Icons.cancel)
+              ),
             ])
     );
 }
