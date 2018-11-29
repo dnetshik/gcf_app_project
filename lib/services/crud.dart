@@ -33,4 +33,8 @@ getData() async
   {
     return await Firestore.instance.collection('projects').getDocuments();
   }
+  getUsers() async
+  {
+    return await Firestore.instance.collection('users').getDocuments();
+  }
 }

@@ -1,0 +1,6 @@
+framework module flutter_search_panel {
+  umbrella header "flutter_search_panel-umbrella.h"
+
+  export *
+  module * { export * }
+}

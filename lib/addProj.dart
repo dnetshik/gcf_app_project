@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:flutter_search_panel/flutter_search_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'services/crud.dart';
@@ -16,6 +16,8 @@ class ProjectDetails extends StatelessWidget
 {
   final ProjectD proj;
   ProjectDetails(this.proj);
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,7 @@ class ProjectDetails extends StatelessWidget
   }
 }
 
+
 class _DashboardPage2State extends State<DashboardPage2> {
   String ProjectName;
   String ProjectDescription;
@@ -47,7 +50,9 @@ class _DashboardPage2State extends State<DashboardPage2> {
 
   QuerySnapshot Projects;
 
+
   ProjectMedthods ProjectObj = new ProjectMedthods();
+
 
   Future<bool> addDialog(BuildContext context) async {
     return showDialog(
@@ -81,6 +86,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
                   },
 
                 ),
+
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project budget'),
@@ -152,8 +158,6 @@ class _DashboardPage2State extends State<DashboardPage2> {
     });
     super.initState();
   }
-
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -204,7 +208,6 @@ class _DashboardPage2State extends State<DashboardPage2> {
       return Text('Loading, Please wait..');
     }
   }
-
 }
 
 class ProjectD
@@ -215,6 +218,4 @@ class ProjectD
   String ProjectManager;
   double Projectbudget;
   ProjectD(this.ProjectName, this.Projectdesc, this.ProjectManager, this.Projectbudget);
-
-
 }

@@ -30,9 +30,11 @@ class _SignupPageState extends State<SignupPage> {
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = new RegExp(pattern);
     if (!regex.hasMatch(value))
-      return 'Enter Valid Email';
+        return 'Enter Valid Email';
     else
       return null;
+
+
   }
 
   String validatePasswordl(String value) {
@@ -47,6 +49,7 @@ class _SignupPageState extends State<SignupPage> {
   createUser() {
     if (checkFields()) {
       //Perform Login
+
       FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
@@ -55,7 +58,7 @@ class _SignupPageState extends State<SignupPage> {
         Navigator.of(context).pop();
         Navigator.of(context).pushReplacementNamed('/dashboard');
       }).catchError((e) {
-        print(e);
+        print("ivlvvliyviv");
       });
     }
   }
@@ -105,7 +108,20 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                     SizedBox(height: 15.0),
                     new TextFormField(
-//                      decoration: InputDecoration(
+                      decoration: const InputDecoration(labelText: 'Password'),
+                      keyboardType: TextInputType.text,
+                      validator: validatePasswordl,
+                      obscureText: true,
+                      onSaved: (String val)
+                      {
+                        _password = val;
+                      }
+
+
+
+
+
+                      //                       decoration: InputDecoration(
 //                        hintText: 'Password',
 //                        contentPadding:
 //                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -117,14 +133,6 @@ class _SignupPageState extends State<SignupPage> {
 //
 //
 //                      ),
-
-                      decoration: const InputDecoration(labelText: 'Password'),
-                      keyboardType: TextInputType.text,
-                      validator: validatePasswordl,
-                      onSaved: (String val)
-                      {
-                        _password = val;
-                      }
 //                      obscureText: true,
 //                      validator: (value) =>
 //                      value.length < 6 ? "Password should have at least 6 characters" : null,

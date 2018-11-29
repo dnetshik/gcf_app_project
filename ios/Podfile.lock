@@ -87,6 +87,8 @@ PODS:
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - Flutter (1.0.0)
+  - flutter_search_panel (0.0.1):
+    - Flutter
   - GoogleAppMeasurement (5.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -160,6 +162,7 @@ DEPENDENCIES:
   - firebase_database (from `.symlinks/plugins/firebase_database/ios`)
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
+  - flutter_search_panel (from `.symlinks/plugins/flutter_search_panel/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
   - video_player (from `.symlinks/plugins/video_player/ios`)
 
@@ -200,6 +203,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_storage/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
+  flutter_search_panel:
+    :path: ".symlinks/plugins/flutter_search_panel/ios"
   image_picker:
     :path: ".symlinks/plugins/image_picker/ios"
   video_player:
@@ -222,6 +227,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FirebaseStorage: fd82e5e5c474897e19972b34b22ac0f589dce04e
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  flutter_search_panel: 30fa46f7cb240e1438ae983532c6d2682e1bfead
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
   GoogleUtilities: abb092d2c12e817fa3e0e7b274987dd72fb86ec3
   gRPC: 9d4c549f37c7cef22478634bac7a0405b6e3dbfb

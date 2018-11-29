@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.8.2+3/android/cloud_firestore.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.8.2+3/android/cloud_firestore.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.6.5/android/firebase_auth.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.6.5/android/firebase_auth.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.2.5+1/android/firebase_core.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.2.5+1/android/firebase_core.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-1.0.5/android/firebase_database.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-1.0.5/android/firebase_database.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-1.0.4/android/firebase_storage.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-1.0.4/android/firebase_storage.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_search_panel-1.0.0/android/flutter_search_panel.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_search_panel-1.0.0/android/flutter_search_panel.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.4.10/android/image_picker.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.4.10/android/image_picker.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.7.2/android/video_player.iml" filepath="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.7.2/android/video_player.iml" />
+    </modules>
+  </component>
+</project>

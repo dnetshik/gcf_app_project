@@ -94,6 +94,15 @@ String validateEmail(String value) {
   else
     return null;
 }
+String validatePasswordl(String value) {
+  Pattern pattern =
+      r'^(([a-zA-Z\-0-9])+[a-zA-Z])$';
+  RegExp regex = new RegExp(pattern);
+  if (!regex.hasMatch(value))
+    return 'Enter Valid Password';
+  else
+    return null;
+}
 
 class _LoginPageState extends State<LoginPage> {
   final formkey = new GlobalKey<FormState>();
@@ -147,7 +156,7 @@ final bool isvalidemail = false;
                     new CircleAvatar(
                       backgroundColor: Colors.transparent,
                       radius: 70.0,
-                      backgroundImage: new AssetImage('assets/logotwo.png'),
+                     // backgroundImage: new AssetImage('assets/logotwo.png'),
                     ),
                     SizedBox(height: 15.0),
                     new TextFormField(
@@ -174,17 +183,28 @@ final bool isvalidemail = false;
     ),
                     SizedBox(height: 15.0),
                     new TextFormField(
-                      decoration: InputDecoration(
-                        hintText: 'Password',
-                        contentPadding:
-                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                      ),
-                      obscureText: true,
-                      validator: (value) =>
-                      value.isEmpty ? 'Password is blank' : null,
-                      onSaved: (value) => _password = value,
+                        decoration: const InputDecoration(labelText: 'Password'),
+                        keyboardType: TextInputType.emailAddress,
+                        obscureText: true,
+                        validator: (value) =>
+                        value.isEmpty ? 'Password is blank' : null,
+                        onSaved: (String val)
+                        {
+                          _password = val;
+                        }
+
+
+//                      decoration: InputDecoration(
+//                        hintText: 'Password',
+//                        contentPadding:
+//                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+//                        border: OutlineInputBorder(
+//                            borderRadius: BorderRadius.circular(20.0)),
+//                      ),
+//                      obscureText: true,
+//                      validator: (value) =>
+//                      value.isEmpty ? 'Password is blank' : null,
+//                      onSaved: (value) => _password = value,
                     ),
 
                     SizedBox(height: 15.0),
@@ -206,7 +226,7 @@ final bool isvalidemail = false;
                         ),
                       ),
                     ),
-                    new Text('Don\'t have an account? '),
+                    new Text('Don\'t have an account?'),
                     new Padding(
                       padding: EdgeInsets.symmetric(vertical: 15.0),
                       child: Material(

@@ -8,6 +8,7 @@
 #import <firebase_core/FirebaseCorePlugin.h>
 #import <firebase_database/FirebaseDatabasePlugin.h>
 #import <firebase_storage/FirebaseStoragePlugin.h>
+#import <flutter_search_panel/FlutterSearchPanelPlugin.h>
 #import <image_picker/ImagePickerPlugin.h>
 #import <video_player/VideoPlayerPlugin.h>
 
@@ -19,6 +20,7 @@
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
   [FLTFirebaseDatabasePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseDatabasePlugin"]];
   [FLTFirebaseStoragePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseStoragePlugin"]];
+  [FlutterSearchPanelPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterSearchPanelPlugin"]];
   [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
   [FLTVideoPlayerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTVideoPlayerPlugin"]];
 }

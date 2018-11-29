@@ -13,6 +13,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.green[400],
+        accentColor: Colors.greenAccent[600],
+        fontFamily: 'Montserrat',
+        textTheme: TextTheme(
+          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          body1: TextStyle(fontSize: 14.0, fontFamily: "Hind"),
+          body2: TextStyle(fontSize: 15.0, fontFamily: 'Hind')
+        )
+      ),
       home: new LoginPage(),
       routes: <String, WidgetBuilder>{
         '/dashboard': (BuildContext context) => new DashboardPage(),
