@@ -137,6 +137,9 @@ class _LoginPageState extends State<LoginPage> {
 final bool isvalidemail = false;
   @override
   Widget build(BuildContext context) {
+
+
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Gcf app'),
@@ -155,8 +158,8 @@ final bool isvalidemail = false;
                   children: <Widget>[
                     new CircleAvatar(
                       backgroundColor: Colors.transparent,
-                      radius: 70.0,
-                     // backgroundImage: new AssetImage('assets/logotwo.png'),
+                      radius: 80.0,
+                      child: Image.asset('assets/GCF-logo-green.png', fit: BoxFit.cover,),
                     ),
                     SizedBox(height: 15.0),
                     new TextFormField(

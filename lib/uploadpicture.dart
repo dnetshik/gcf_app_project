@@ -53,13 +53,13 @@ class _UploadPicturePageState extends State<UploadPicturePage> {
           Image.file(sampleImage, height: 300.0, width: 300.0),
           RaisedButton(
             elevation: 7.0,
-            child: Text('Upload'),
+            child: Text('Upload To Your Storage'),
             textColor: Colors.white,
             color: Colors.blue,
             onPressed: () {
               final StorageReference firebaseStorageRef = FirebaseStorage.instance.ref().child('images/$baseName');
-
-             final StorageUploadTask task = firebaseStorageRef.putFile(sampleImage);
+              final StorageUploadTask task = firebaseStorageRef.putFile(sampleImage);
+              Navigator.of(context).pushReplacementNamed('/uploadpicture');
 
             },
           )

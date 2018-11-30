@@ -27,16 +27,31 @@ class ProjectDetails extends StatelessWidget
         title: Text('Project details'),
       ),
 
-      body: Center(
-        child: new OutlineButton(
-            borderSide: BorderSide(
-                color: Colors.red, style: BorderStyle.solid, width: 3.0),
-            child: Text('Upload'),
-            onPressed: () {
-              Navigator.of(context).pushReplacementNamed('/uploadpicture');
-            }
-        )
+        body: Padding(padding: EdgeInsets.symmetric(vertical: 15.0),
+        child: new RaisedButton(child: Text('Press to upload'),
+    onPressed: () {
+      Navigator.of(context).pushReplacementNamed('/uploadpicture');
+    }
     ),
+        ),
+
+
+
+
+
+
+
+//      body: Center(
+//        child: new OutlineButton(
+//            padding: EdgeInsets.symmetric(vertical: 15.0),
+//            borderSide: BorderSide(
+//                color: Colors.greenAccent, style: BorderStyle.solid, width: 3.0),
+//            child: Text('Press to upload'),
+//            onPressed: () {
+//              Navigator.of(context).pushReplacementNamed('/uploadpicture');
+//            }
+//        )
+//    ),
     );
   }
 }
@@ -56,10 +71,12 @@ class _DashboardPage2State extends State<DashboardPage2> {
 
   Future<bool> addDialog(BuildContext context) async {
     return showDialog(
+
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
+
             title: Text('Add Data', style: TextStyle(fontSize: 15.0)),
             content: Column(
               children: <Widget>[
@@ -190,7 +207,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
     if (Projects != null) {
       return ListView.builder(
         itemCount: Projects.documents.length,
-        padding: EdgeInsets.all(5.0),
+        padding: EdgeInsets.all(3.0),
         itemBuilder: (context, i) {
           return new ListTile(
               title: Text(Projects.documents[i].data['projectname']),
