@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/goinfre/dnetshik/Desktop/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/goinfre/dnetshik/Desktop/upload_image/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/goinfre/dnetshik/Desktop/gcf-app/build/app/generated/res/google-services/debug/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -95,7 +95,24 @@
                     }
                 },
                 {
-                    "source": "/goinfre/dnetshik/Desktop/upload_image/android/app/src/main/res/values/styles.xml",
+                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/be56742d0ee46bc9170ea4197276a090/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "238,401",
+                        "endColumns": "63,166",
+                        "endOffsets": "301,567"
+                    },
+                    "to": {
+                        "startLines": "432,473",
+                        "startColumns": "4,4",
+                        "startOffsets": "37911,41327",
+                        "endColumns": "67,166",
+                        "endOffsets": "37974,41489"
+                    }
+                },
+                {
+                    "source": "/goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -111,23 +128,6 @@
                         "endLines": "1534",
                         "endColumns": "12",
                         "endOffsets": "109973"
-                    }
-                },
-                {
-                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/be56742d0ee46bc9170ea4197276a090/res/values/values.xml",
-                    "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
-                    },
-                    "to": {
-                        "startLines": "432,473",
-                        "startColumns": "4,4",
-                        "startOffsets": "37911,41327",
-                        "endColumns": "67,166",
-                        "endOffsets": "37974,41489"
                     }
                 }
             ]

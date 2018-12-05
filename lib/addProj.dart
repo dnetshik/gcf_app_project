@@ -3,6 +3,8 @@ import 'package:flutter_search_panel/flutter_search_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'services/crud.dart';
+import 'SelectEmail.dart' as ema;
+
 
 import 'dart:async';
 import 'utils/utils.dart';
@@ -10,6 +12,11 @@ import 'package:firebase_database/firebase_database.dart';
 class DashboardPage2 extends StatefulWidget {
   @override
   _DashboardPage2State createState() => _DashboardPage2State();
+}
+class thrwException implements Exception{
+  String message() {
+    print('Error');
+  }
 }
 
 class ProjectDetails extends StatelessWidget
@@ -31,6 +38,7 @@ class ProjectDetails extends StatelessWidget
         child: new RaisedButton(child: Text('Press to upload'),
     onPressed: () {
       Navigator.of(context).pushReplacementNamed('/uploadpicture');
+      //Navigator.of(context).pushReplacementNamed('/SelectEmail');
     }
     ),
         ),
@@ -68,6 +76,10 @@ class _DashboardPage2State extends State<DashboardPage2> {
 
   ProjectMedthods ProjectObj = new ProjectMedthods();
 
+  void  validateProj(String val)
+  {
+
+  }
 
   Future<bool> addDialog(BuildContext context) async {
     return showDialog(
@@ -75,6 +87,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
+          print('Begin');
           return AlertDialog(
 
             title: Text('Add Data', style: TextStyle(fontSize: 15.0)),
@@ -83,7 +96,9 @@ class _DashboardPage2State extends State<DashboardPage2> {
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Name'),
                   onChanged: (value) {
-                    this.ProjectName = value;
+
+                      this.ProjectName = value;
+
                   },
 
                 ),
@@ -91,24 +106,27 @@ class _DashboardPage2State extends State<DashboardPage2> {
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Description'),
                   onChanged: (value) {
+                    //print('Project Description');
                     this.ProjectDescription = value;
                   },
+
                 ),
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Manager'),
 
                   onChanged: (value) {
-                    this.ProjectManager = value;
-                  },
-
-                ),
+                    //print('Project Manager');
+                    //this.ProjectManager = value;
+                    this.ProjectManager = ema.email;
+                  }),
 
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project budget'),
 
                   onChanged: (value) {
+                   // print('Project budget');
                     this.Projectbudget = double.parse(value);
                   },
 
@@ -116,10 +134,12 @@ class _DashboardPage2State extends State<DashboardPage2> {
               ],
             ),
             actions: <Widget>[
+
               FlatButton(
                 child: Text('Add Project'),
                 textColor: Colors.blue,
                 onPressed: () {
+                  print("this is Project name: " + this.ProjectName);
                   Navigator.of(context).pop();
                   ProjectObj.addData({
                     'projectname': this.ProjectName,
@@ -130,7 +150,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
                   }).then((result) {
                     dialogTrigger(context);
                   }).catchError((e) {
-                    print(e);
+                    throw new thrwException();
                   });
                 },
               ),
@@ -151,7 +171,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Job Done', style: TextStyle(fontSize: 15.0)),
+            title: Text('Am here', style: TextStyle(fontSize: 15.0)),
             content: Text('Project Added'),
             actions: <Widget>[
               FlatButton(

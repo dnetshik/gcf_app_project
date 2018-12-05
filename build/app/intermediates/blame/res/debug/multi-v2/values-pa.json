@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/goinfre/dnetshik/Desktop/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml",
+            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml",
             "map": [
                 {
                     "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/be56742d0ee46bc9170ea4197276a090/res/values-pa/values.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/goinfre/dnetshik/Desktop/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
+            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/res/values-ja/values-ja.xml",
