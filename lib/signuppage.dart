@@ -67,25 +67,27 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Sign up'),
-        centerTitle: true,
+        leading: Image.asset('images/logogreen.png',alignment: Alignment.topRight,height: 45.0, ),
+        backgroundColor: Theme.of(context).backgroundColor,
+
       ),
       body: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            new Container(
-              padding: EdgeInsets.all(25.0),
+            new Center(
+            child: Container(
+              padding: EdgeInsets.all(35.0),
               child: new Form(
                 key: formkey,
                 child: new Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    new CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 70.0,
-                      backgroundImage: new AssetImage('assets/logotwo.png'),
-                    ),
+//                    new CircleAvatar(
+//                      backgroundColor: Colors.transparent,
+//                      radius: 70.0,
+//                      backgroundImage: new AssetImage('assets/logotwo.png'),
+//                    ),
                     SizedBox(height: 15.0),
                     new TextFormField(
                         decoration: const InputDecoration(labelText: 'Email'),
@@ -108,20 +110,7 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                     SizedBox(height: 15.0),
                     new TextFormField(
-                      decoration: const InputDecoration(labelText: 'Password'),
-                      keyboardType: TextInputType.text,
-                      validator: validatePasswordl,
-                      obscureText: true,
-                      onSaved: (String val)
-                      {
-                        _password = val;
-                      }
-
-
-
-
-
-                      //                       decoration: InputDecoration(
+//                      decoration: InputDecoration(
 //                        hintText: 'Password',
 //                        contentPadding:
 //                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -133,6 +122,14 @@ class _SignupPageState extends State<SignupPage> {
 //
 //
 //                      ),
+
+                      decoration: const InputDecoration(labelText: 'Password'),
+                      keyboardType: TextInputType.text,
+                      validator: validatePasswordl,
+                      onSaved: (String val)
+                      {
+                        _password = val;
+                      }
 //                      obscureText: true,
 //                      validator: (value) =>
 //                      value.length < 6 ? "Password should have at least 6 characters" : null,
@@ -143,13 +140,13 @@ class _SignupPageState extends State<SignupPage> {
                       padding: EdgeInsets.symmetric(vertical: 15.0),
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.lightBlueAccent,
+                        shadowColor: Theme.of(context).buttonColor,
                         elevation: 7.0,
                         child: MaterialButton(
                           minWidth: 500.0,
                           height: 40.0,
                           onPressed: createUser,
-                          color: Colors.lightBlueAccent,
+                          color: Theme.of(context).buttonColor,
                           child: Text(
                             'Register',
                             style: new TextStyle(color: Colors.white),
@@ -161,6 +158,7 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ),
             ),
+            )
           ],
         ),
       ),

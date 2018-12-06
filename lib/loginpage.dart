@@ -94,15 +94,6 @@ String validateEmail(String value) {
   else
     return null;
 }
-String validatePasswordl(String value) {
-  Pattern pattern =
-      r'^(([a-zA-Z\-0-9])+[a-zA-Z])$';
-  RegExp regex = new RegExp(pattern);
-  if (!regex.hasMatch(value))
-    return 'Enter Valid Password';
-  else
-    return null;
-}
 
 class _LoginPageState extends State<LoginPage> {
   final formkey = new GlobalKey<FormState>();
@@ -137,31 +128,37 @@ class _LoginPageState extends State<LoginPage> {
 final bool isvalidemail = false;
   @override
   Widget build(BuildContext context) {
-
-
-
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Gcf app'),
-        centerTitle: true,
+        title: Image.asset('images/logogreen.png',alignment: Alignment.topRight,height: 45.0, ),
+        backgroundColor: Theme.of(context).backgroundColor,
       ),
       body: Center(
         child: ListView(
+
           shrinkWrap: true,
           children: <Widget>[
-            new Container(
-              padding: EdgeInsets.all(25.0),
+
+            new Center(
+
+            child: Container(
+
+              padding: EdgeInsets.all(35.0),
+
+
+
               child: new Form(
                 key: formkey,
+
                 child: new Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    new CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 80.0,
-                      child: Image.asset('assets/GCF-logo-green.png', fit: BoxFit.cover,),
-                    ),
-                    SizedBox(height: 15.0),
+//                    new CircleAvatar(
+//                      backgroundColor: Colors.transparent,
+//                      radius: 70.0,
+//                      backgroundImage: new AssetImage('assets/logotwo.png'),
+//                    ),
+                    SizedBox(height: 10.0),
                     new TextFormField(
                           decoration: const InputDecoration(labelText: 'Email'),
                           keyboardType: TextInputType.emailAddress,
@@ -184,30 +181,15 @@ final bool isvalidemail = false;
 
 
     ),
-                    SizedBox(height: 15.0),
+                    SizedBox(height: 10.0),
                     new TextFormField(
-                        decoration: const InputDecoration(labelText: 'Password'),
-                        keyboardType: TextInputType.emailAddress,
-                        obscureText: true,
-                        validator: (value) =>
-                        value.isEmpty ? 'Password is blank' : null,
-                        onSaved: (String val)
-                        {
-                          _password = val;
-                        }
-
-
-//                      decoration: InputDecoration(
-//                        hintText: 'Password',
-//                        contentPadding:
-//                        EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-//                        border: OutlineInputBorder(
-//                            borderRadius: BorderRadius.circular(20.0)),
-//                      ),
-//                      obscureText: true,
-//                      validator: (value) =>
-//                      value.isEmpty ? 'Password is blank' : null,
-//                      onSaved: (value) => _password = value,
+                      decoration: InputDecoration(
+                      labelText: 'Password',
+                      ),
+                      obscureText: true,
+                      validator: (value) =>
+                      value.isEmpty ? 'Password is blank' : null,
+                      onSaved: (value) => _password = value,
                     ),
 
                     SizedBox(height: 15.0),
@@ -215,13 +197,13 @@ final bool isvalidemail = false;
                       padding: EdgeInsets.symmetric(vertical: 15.0),
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.lightBlueAccent,
+                        shadowColor: Theme.of(context).buttonColor,
                         elevation: 7.0,
                         child: MaterialButton(
                           minWidth: 500.0,
                           height: 40.0,
                           onPressed: loginUser,
-                          color: Colors.lightBlueAccent,
+                          color: Theme.of(context).buttonColor,
                           child: Text(
                             'Log In',
                             style: new TextStyle(color: Colors.white),
@@ -229,12 +211,12 @@ final bool isvalidemail = false;
                         ),
                       ),
                     ),
-                    new Text('Don\'t have an account?'),
+                    new Text('Don\'t have an account? '),
                     new Padding(
-                      padding: EdgeInsets.symmetric(vertical: 15.0),
+                      padding: EdgeInsets.symmetric(vertical: 15.0,),
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.lightBlueAccent,
+                        shadowColor: Theme.of(context).buttonColor,
                         elevation: 7.0,
                         child: MaterialButton(
                           minWidth: 500.0,
@@ -242,7 +224,7 @@ final bool isvalidemail = false;
                           onPressed: () {
                             Navigator.of(context).pushNamed('/signup');
                           },
-                          color: Colors.lightBlueAccent,
+                          color: Theme.of(context).buttonColor,
                           child: Text(
                             'Signup',
                             style: new TextStyle(color: Colors.white),
@@ -254,6 +236,7 @@ final bool isvalidemail = false;
                 ),
               ),
             ),
+            )
           ],
         ),
       ),

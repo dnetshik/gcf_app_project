@@ -5,7 +5,7 @@ import 'signuppage.dart';
 import 'homepage.dart';
 import 'uploadpicture.dart';
 import 'addProj.dart';
-import 'SelectEmail.dart';
+import 'utils/addstep.dart';
 
 void main() => runApp(new MyApp());
 
@@ -18,9 +18,11 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.green[400],
         accentColor: Colors.greenAccent[600],
         fontFamily: 'Montserrat',
+        buttonColor: Colors.green[600],
+        backgroundColor: Colors.white70,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          title: TextStyle(fontStyle: FontStyle.italic),
           body1: TextStyle(fontSize: 14.0, fontFamily: "Hind"),
           body2: TextStyle(fontSize: 15.0, fontFamily: 'Hind')
         )
@@ -32,8 +34,7 @@ class MyApp extends StatelessWidget {
         '/signup': (BuildContext context) => new SignupPage(),
         '/uploadpicture': (BuildContext context) => new UploadPicturePage(),
         '/addProj': (BuildContext context) => new DashboardPage2(),
-        '/SelectEmail': (BuildContext context) => new GetUsers(),
-
+        '/addstep': (BuildContext context) => new MyHome()
       },
     );
   }

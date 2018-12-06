@@ -2,12 +2,6 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
-class thrwException implements Exception{
-  String message() {
-    print('Error');
-  }
-}
 class ProjectMedthods
 {
     bool isLoggedIn()
@@ -27,8 +21,7 @@ Future<void> addData(ProjectData) async
   {
     Firestore.instance.collection('projects').add(ProjectData).catchError((e)
     {
-      throw new thrwException();
-      //print(e);
+      print(e);
     });
   } else
     {

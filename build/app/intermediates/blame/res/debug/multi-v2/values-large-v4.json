@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/home/makhado/Documents/untitled/art/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/makhado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/daaf5464de15787a4f28f1262d2b5c0e/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

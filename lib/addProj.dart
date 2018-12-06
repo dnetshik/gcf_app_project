@@ -3,8 +3,6 @@ import 'package:flutter_search_panel/flutter_search_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'services/crud.dart';
-import 'SelectEmail.dart' as ema;
-
 
 import 'dart:async';
 import 'utils/utils.dart';
@@ -12,11 +10,6 @@ import 'package:firebase_database/firebase_database.dart';
 class DashboardPage2 extends StatefulWidget {
   @override
   _DashboardPage2State createState() => _DashboardPage2State();
-}
-class thrwException implements Exception{
-  String message() {
-    print('Error');
-  }
 }
 
 class ProjectDetails extends StatelessWidget
@@ -34,32 +27,16 @@ class ProjectDetails extends StatelessWidget
         title: Text('Project details'),
       ),
 
-        body: Padding(padding: EdgeInsets.symmetric(vertical: 15.0),
-        child: new RaisedButton(child: Text('Press to upload'),
-    onPressed: () {
-      Navigator.of(context).pushReplacementNamed('/uploadpicture');
-      //Navigator.of(context).pushReplacementNamed('/SelectEmail');
-    }
+      body: Center(
+        child: new OutlineButton(
+            borderSide: BorderSide(
+                color: Colors.red, style: BorderStyle.solid, width: 3.0),
+            child: Text('Upload'),
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/uploadpicture');
+            }
+        )
     ),
-        ),
-
-
-
-
-
-
-
-//      body: Center(
-//        child: new OutlineButton(
-//            padding: EdgeInsets.symmetric(vertical: 15.0),
-//            borderSide: BorderSide(
-//                color: Colors.greenAccent, style: BorderStyle.solid, width: 3.0),
-//            child: Text('Press to upload'),
-//            onPressed: () {
-//              Navigator.of(context).pushReplacementNamed('/uploadpicture');
-//            }
-//        )
-//    ),
     );
   }
 }
@@ -76,29 +53,20 @@ class _DashboardPage2State extends State<DashboardPage2> {
 
   ProjectMedthods ProjectObj = new ProjectMedthods();
 
-  void  validateProj(String val)
-  {
-
-  }
 
   Future<bool> addDialog(BuildContext context) async {
     return showDialog(
-
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
-          print('Begin');
           return AlertDialog(
-
             title: Text('Add Data', style: TextStyle(fontSize: 15.0)),
             content: Column(
               children: <Widget>[
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Name'),
                   onChanged: (value) {
-
-                      this.ProjectName = value;
-
+                    this.ProjectName = value;
                   },
 
                 ),
@@ -106,27 +74,24 @@ class _DashboardPage2State extends State<DashboardPage2> {
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Description'),
                   onChanged: (value) {
-                    //print('Project Description');
                     this.ProjectDescription = value;
                   },
-
                 ),
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project Manager'),
 
                   onChanged: (value) {
-                    //print('Project Manager');
-                    //this.ProjectManager = value;
-                    this.ProjectManager = ema.email;
-                  }),
+                    this.ProjectManager = value;
+                  },
+
+                ),
 
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(hintText: 'Enter Project budget'),
 
                   onChanged: (value) {
-                   // print('Project budget');
                     this.Projectbudget = double.parse(value);
                   },
 
@@ -134,12 +99,10 @@ class _DashboardPage2State extends State<DashboardPage2> {
               ],
             ),
             actions: <Widget>[
-
               FlatButton(
                 child: Text('Add Project'),
                 textColor: Colors.blue,
                 onPressed: () {
-                  print("this is Project name: " + this.ProjectName);
                   Navigator.of(context).pop();
                   ProjectObj.addData({
                     'projectname': this.ProjectName,
@@ -150,7 +113,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
                   }).then((result) {
                     dialogTrigger(context);
                   }).catchError((e) {
-                    throw new thrwException();
+                    print(e);
                   });
                 },
               ),
@@ -171,7 +134,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Am here', style: TextStyle(fontSize: 15.0)),
+            title: Text('Job Done', style: TextStyle(fontSize: 15.0)),
             content: Text('Project Added'),
             actions: <Widget>[
               FlatButton(
@@ -200,6 +163,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
     return new Scaffold(
         appBar: AppBar(
           title: Text('Admin'),
+          backgroundColor: Theme.of(context).backgroundColor,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.add),
@@ -227,18 +191,21 @@ class _DashboardPage2State extends State<DashboardPage2> {
     if (Projects != null) {
       return ListView.builder(
         itemCount: Projects.documents.length,
-        padding: EdgeInsets.all(3.0),
+        padding: EdgeInsets.all(5.0),
         itemBuilder: (context, i) {
-          return new ListTile(
+          return new Column(children: <Widget>[
+          ListTile(
+             // leading: Text(Projects.documents[i].data['projectname']),
               title: Text(Projects.documents[i].data['projectname']),
               subtitle: Text(Projects.documents[i].data['projectdesc']),
-
               onTap: () {
                 //Navigator.of(context).pop();
                 Navigator.push(context, new MaterialPageRoute(builder: (context) => ProjectDetails(Projects.documents[i].data[i])));
 
               }
-          );
+          ),
+            Divider(color: Theme.of(context).primaryColor,indent: 5.0,),
+          ]);
         },
       );
     } else {
