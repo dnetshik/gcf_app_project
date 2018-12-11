@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/makhado/Documents/untitled/art/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
+            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml",
             "map": [
                 {
-                    "source": "/home/makhado/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/6520e55c75c18526e832da36016a7da6/res/values-cs/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,349,541,664,772,984,1109,1247,1373,1607,1716,1911,2037,2257,2438,2532,2625",
-                        "endColumns": "103,191,122,107,211,124,137,125,233,108,194,125,219,180,93,92,110",
-                        "endOffsets": "348,540,663,771,983,1108,1246,1372,1606,1715,1910,2036,2256,2437,2531,2624,2735"
-                    },
-                    "to": {
-                        "startLines": "21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2065,2173,2365,2492,2604,2816,2945,3087,3419,3653,3766,3961,4091,4311,4496,4594,4691",
-                        "endColumns": "107,191,126,111,211,128,141,129,233,112,194,129,219,184,97,96,114",
-                        "endOffsets": "2168,2360,2487,2599,2811,2940,3082,3212,3648,3761,3956,4086,4306,4491,4589,4686,4801"
-                    }
-                },
-                {
-                    "source": "/home/makhado/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/a7c8174930a97ea2aaf025c299dcd8e8/res/values-cs/values.xml",
+                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.0.1.aar/be56742d0ee46bc9170ea4197276a090/res/values-cs/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/makhado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/daaf5464de15787a4f28f1262d2b5c0e/res/values-cs/values-cs.xml",
+                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/0b990cd115dab6ea77b547380b7f1618/res/values-cs/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,349,541,664,772,984,1109,1247,1373,1607,1716,1911,2037,2257,2438,2532,2625",
+                        "endColumns": "103,191,122,107,211,124,137,125,233,108,194,125,219,180,93,92,110",
+                        "endOffsets": "348,540,663,771,983,1108,1246,1372,1606,1715,1910,2036,2256,2437,2531,2624,2735"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,24,25,26,27,28,30,31,32,33,34,35,36,37,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2065,2173,2365,2492,2604,2816,2945,3087,3419,3653,3766,3961,4091,4311,4496,4594,4691",
+                        "endColumns": "107,191,126,111,211,128,141,129,233,112,194,129,219,184,97,96,114",
+                        "endOffsets": "2168,2360,2487,2599,2811,2940,3082,3212,3648,3761,3956,4086,4306,4491,4589,4686,4801"
+                    }
+                },
+                {
+                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

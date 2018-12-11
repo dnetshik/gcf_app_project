@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:upload_image/utils/utils.dart' as util;
 
 class ProjectMedthods
 {
@@ -37,4 +38,24 @@ getData() async
   {
     return await Firestore.instance.collection('users').getDocuments();
   }
+    getUserData() async
+    {
+      //return await Firestore.instance.collection('projects').getDocuments();
+      return await Firestore.instance
+          .collection('projects')
+          .where("projectmanager", isEqualTo: util.currentuseremail)
+          .getDocuments();
+         // .listen((data) =>
+         // data.documents.forEach((doc) => print(doc["proje"])));
+    }
+    getSpecificProjData() async
+    {
+      //return await Firestore.instance.collection('projects').getDocuments();
+      return await Firestore.instance
+          .collection('projects')
+          .where("projectname", isEqualTo: util.projectId)
+          .getDocuments();
+      // .listen((data) =>
+      // data.documents.forEach((doc) => print(doc["proje"])));
+    }
 }

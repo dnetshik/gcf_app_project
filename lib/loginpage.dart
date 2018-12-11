@@ -8,7 +8,7 @@ import 'services/usermangement.dart';
 import 'addProj.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:email_validator/email_validator.dart';
-
+import 'utils/utils.dart' as util;
 
 
 authorizeAccess(BuildContext context) {
@@ -24,6 +24,7 @@ authorizeAccess(BuildContext context) {
                   builder: (BuildContext context) => DashboardPage2()));
         }
         else if(docs.documents[0].data['role'] == 'user') {
+          util.currentuseremail = docs.documents[0].data['email'];
           Navigator.of(context).push(
               new MaterialPageRoute(
                   builder: (BuildContext context) => AllUsersPage()));

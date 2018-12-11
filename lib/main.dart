@@ -6,6 +6,7 @@ import 'homepage.dart';
 import 'uploadpicture.dart';
 import 'addProj.dart';
 import 'utils/addstep.dart';
+import 'projectdetails.dart';
 
 void main() => runApp(new MyApp());
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+
       theme: ThemeData(
         primaryColor: Colors.green[400],
         accentColor: Colors.greenAccent[600],
@@ -34,7 +36,9 @@ class MyApp extends StatelessWidget {
         '/signup': (BuildContext context) => new SignupPage(),
         '/uploadpicture': (BuildContext context) => new UploadPicturePage(),
         '/addProj': (BuildContext context) => new DashboardPage2(),
-        '/addstep': (BuildContext context) => new MyHome()
+        '/addstep': (BuildContext context) => new MyHome(),
+        '/projectdetails': (BuildContext context) => new ProjectDetailsPage(),
+
       },
     );
   }

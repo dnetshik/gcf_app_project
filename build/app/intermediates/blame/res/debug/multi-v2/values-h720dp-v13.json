@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/makhado/Documents/untitled/art/upload_image/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "/goinfre/dnetshik/Desktop/gcf-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/makhado/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/daaf5464de15787a4f28f1262d2b5c0e/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
