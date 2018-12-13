@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'loginpage.dart';
 import 'signuppage.dart';
 import 'homepage.dart';
-import 'uploadpicture.dart';
+import 'uploadsiteimages.dart';
 import 'addProj.dart';
 import 'utils/addstep.dart';
 import 'projectdetails.dart';
+import 'utils/tabs.dart';
+import 'uploadreciepts.dart';
 
 void main() => runApp(new MyApp());
 
@@ -34,10 +36,12 @@ class MyApp extends StatelessWidget {
         '/dashboard': (BuildContext context) => new DashboardPage(),
         '/landingpage': (BuildContext context) => new MyApp(),
         '/signup': (BuildContext context) => new SignupPage(),
-        '/uploadpicture': (BuildContext context) => new UploadPicturePage(),
+        '/uploadsiteimages': (BuildContext context) => new UploadSiteImagesPage(),
         '/addProj': (BuildContext context) => new DashboardPage2(),
         '/addstep': (BuildContext context) => new MyHome(),
         '/projectdetails': (BuildContext context) => new ProjectDetailsPage(),
+        '/tabs': (BuildContext context) => new Tabs(),
+        '/uploadreciepts': (BuildContext context) => new UploadReceiptsPage(),
 
       },
     );

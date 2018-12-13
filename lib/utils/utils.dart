@@ -7,6 +7,7 @@ String currentProfilePic = "https://avatars3.githubusercontent.com/u/16825392?s=
 String currentuseremail = "";
 String projectId = "";
 
+
 Drawer addDrawer(context){
         return new Drawer(
             child: new ListView(
@@ -86,6 +87,7 @@ Drawer addDrawer(context){
                 new ListTile(
                   contentPadding: EdgeInsets.only(left: 30.0),
                   title: new Text('Reciepts'),
+                  onTap: (){Navigator.of(context).pushNamed('/uploadpicture');},
                 ),
                 new ListTile(
                   contentPadding: EdgeInsets.only(left: 30.0),

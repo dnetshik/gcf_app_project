@@ -6,7 +6,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'utils/utils.dart' as util;
 import 'dart:async';
 import 'dart:io';
-
+import 'utils/tabs.dart';
 import 'dart:async';
 import 'utils/utils.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -38,6 +38,9 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
   Widget build(BuildContext context) {
     var getprojname =  Projects.documents[0].data['projectname'];
     var getprojdesc =  Projects.documents[0].data['projectdesc'];
+    var numberofempperproj =  Projects.documents[0].data['numberofempPerproj'].toString();
+    var projectmanger =  Projects.documents[0].data['projectmanager'];
+    var projectbudget = Projects.documents[0].data['projectbudget'].toString();
 
     // TODO: implement build
     return Scaffold(
@@ -45,7 +48,8 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
           // title: Text('Project details'),
           elevation: 2.0,
           backgroundColor: Colors.white,
-          title: Text('Dashboard', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 30.0)),
+
+          title: Text(getprojname , style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 19.0)),
           actions: <Widget>
           [
             Container
@@ -73,62 +77,89 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
             _buildTile(
               Padding
                 (
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
                 child: Row
                   (
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+
+//                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>
                     [
-                      Column
+                      Container(
+                        width: 240.0,
+                      child: Column
                         (
-                        mainAxisAlignment: MainAxisAlignment.center,
+
+//                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-//                          Text(getprojname , style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                          Text('Description', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 12.0, ),maxLines: 4,),
                           Text(getprojdesc, style: TextStyle(color: Colors.blueAccent)),
                         ],
-                      ),
-                      Material
-                        (
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(24.0),
-                          child: Center
-                            (
-                              child: Padding
-                                (
-                                padding: const EdgeInsets.all(16.0),
-                                child: Icon(Icons.timeline, color: Colors.white, size: 30.0),
-                              )
-                          )
-                      )
+                      )),
+//                      Material
+//                        (
+//                          color: Colors.blue,
+//                          borderRadius: BorderRadius.circular(24.0),
+//                          child: Center
+//                            (
+//                              child: Padding
+//                                (
+//                                padding: const EdgeInsets.all(16.0),
+//                                child: Icon(Icons.timeline, color: Colors.white, size: 30.0),
+//                              )
+//                          )
+//                      )
                     ]
                 ),
               ),
             ),
             _buildTile(
               Padding(
-                padding: const EdgeInsets.all(24.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column
                   (
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>
                     [
-                      Material
-                        (
-                          color: Colors.teal,
-                          shape: CircleBorder(),
-                          child: Padding
-                            (
-                            padding: const EdgeInsets.all(16.0),
-                            child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
-                          )
-                      ),
-                      Padding(padding: EdgeInsets.only(bottom: 16.0)),
-                      Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
-                      Text('Images, Videos', style: TextStyle(color: Colors.black45)),
+//                      Material
+//                        (
+//                          color: Colors.teal,
+//                          shape: CircleBorder(),
+//                          child: Padding
+//                            (
+//                            padding: const EdgeInsets.all(16.0),
+//                            child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
+//                          )
+//                      ),
+                      Text( "Employees Details:", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 12.0)),
+                      Padding(padding: EdgeInsets.only(bottom: 7.5)),
+
+                      Row(children: <Widget>[
+                      Icon(Icons.person, color: Colors.green,),
+                      Text( projectmanger, style: TextStyle(color: Colors.blueAccent, fontSize: 12.0)),
+                    ],),
+                                            Padding(padding: EdgeInsets.only(bottom: 3.5)),
+
+                      Row(children: <Widget>[
+                  Icon(Icons.people, color: Colors.green,),
+                  Text( numberofempperproj, style: TextStyle(color: Colors.blueAccent)),
+                ]),
+//                      Padding(padding: EdgeInsets.only(bottom: 16.0)),
+//                      Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+
+
+                      Padding(padding: EdgeInsets.only(bottom: 10.5)),
+                      Text( "Project Cost:", style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 12.0)),
+                      Padding(padding: EdgeInsets.only(bottom: 7.5)),
+
+                      Row(children: <Widget>[
+                        Icon(Icons.monetization_on, color: Colors.amber[800],),
+                        Text( projectbudget, style: TextStyle(color: Colors.blueAccent, fontSize: 12.0, fontWeight: FontWeight.w700)),
+                      ],),
+
                     ]
                 ),
               ),
@@ -182,7 +213,7 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>
                             [
-                              Text('Revenue', style: TextStyle(color: Colors.green)),
+                              Text('Objectives', style: TextStyle(color: Colors.green)),
                               Text('\$16K', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
                             ],
                           ),
@@ -233,8 +264,8 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          Text('Shop Items', style: TextStyle(color: Colors.redAccent)),
-                          Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                          Text('Upload Reciepts Pictures', style: TextStyle(color: Colors.blueAccent)),
+                          //Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
                         ],
                       ),
                       Material
@@ -246,14 +277,14 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
                               child: Padding
                                 (
                                 padding: EdgeInsets.all(16.0),
-                                child: Icon(Icons.store, color: Colors.white, size: 30.0),
+                                child: Icon(Icons.image, color: Colors.white, size: 30.0),
                               )
                           )
                       )
                     ]
                 ),
               ),
-              onTap: (){} ,
+              onTap: (){Navigator.of(context).pushNamed('/tabs');},
               //  => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage()))
             )
           ],

@@ -400,7 +400,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
     return new Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Admin'),
+          title: Text('All GCF Projects'),
           backgroundColor: Theme.of(context).backgroundColor,
           actions: <Widget>[
             IconButton(

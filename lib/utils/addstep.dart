@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 final _formKey = GlobalKey<FormState>();
 var email;
 
+
 class MyHome extends StatefulWidget {
   @override
   MyHomeState createState() => new MyHomeState();
@@ -64,8 +65,10 @@ class MyHomeState extends State<MyHome> {
                 child: Text('Alright'),
                 textColor: Colors.blue,
                 onPressed: () {
+
                   Navigator.of(context).pop();
                   Navigator.of(context).pushNamed('/addProj');
+
                 },
               )
             ],
@@ -125,6 +128,7 @@ class MyHomeState extends State<MyHome> {
                     const InputDecoration(labelText: 'Project Description'),
                 keyboardType: TextInputType.multiline,
                 maxLines: 5,
+                maxLength: 90,
                 validator: (value) {
                   if (value.isEmpty) {
                     return 'Please enter some text';
@@ -245,7 +249,7 @@ class MyHomeState extends State<MyHome> {
                 onPressed: () {
                   // Validate will return true if the form is valid, or false if
                   // the form is invalid.
-                  if (_formKey.currentState.validate()) {
+                  if (true) {
                     // If the form is valid, we want to show a Snackbar
                     Scaffold.of(context).showSnackBar(
                         SnackBar(content: Text('Processing Data')));
@@ -313,6 +317,7 @@ class MyHomeState extends State<MyHome> {
                     if (current_step < my_steps.length - 1) {
                       current_step = current_step + 1;
                     } else {
+                     current_step = 0;
                       ProjectObj.addData({
                         'projectname': this.ProjectName,
                         'projectdesc': this.Projectdesc,
