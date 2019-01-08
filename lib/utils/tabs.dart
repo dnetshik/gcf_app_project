@@ -1,6 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:upload_image/uploadsiteimages.dart';
+import 'dart:io';
 
+import 'package:flutter/material.dart';
+import 'package:upload_image/projectdetails.dart';
+import 'package:upload_image/uploadsiteimages.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'dart:async';
 
 class Tabs extends StatefulWidget {
   @override
@@ -8,8 +13,18 @@ class Tabs extends StatefulWidget {
 }
 
 
-class _TabsState extends State<Tabs>
-{
+class _TabsState extends State<Tabs> {
+  File sampleImage;
+
+  Future getImage() async {
+    var tempImage = await ImagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      sampleImage = tempImage;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,12 +56,24 @@ class _TabsState extends State<Tabs>
 
               new Column(
                 children: <Widget>[
-                 // Icon(Icons.receipt),
+           new Container(
+             height: 470,
+          child: Center( child: sampleImage == null ? Text('No images') : enableUpload(),)
 
-                  new OutlineButton(
-                    child: Text('Uplaod Receipt'),
-                    onPressed: () {Navigator.of(context).pushNamed('/uploadreciepts');},
-                  )
+      ),
+                  // Icon(Icons.receipt),
+                new FloatingActionButton(
+              onPressed: getImage,
+                tooltip: 'Add Image',
+                child: new Icon(Icons.camera_alt),
+
+              ),
+//              new OutlineButton(
+//                    child: Text('Uplaod Receipt'),
+//                    onPressed: () {
+//                      Navigator.of(context).pushNamed('/uploadreciepts');
+//                    },
+//                  )
                 ],
               ),
               new Column(
@@ -54,7 +81,9 @@ class _TabsState extends State<Tabs>
                   //Icon(Icons.image),
                   new OutlineButton(
                     child: Text('Upload Site Images'),
-                    onPressed: () {Navigator.of(context).pushNamed('/uploadsiteimages');},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/uploadsiteimages');
+                    },
                   )
                 ],
               )
@@ -65,6 +94,38 @@ class _TabsState extends State<Tabs>
         ),
       ),
     );
-    }
+  }
+
+
+  Widget enableUpload() {
+    String filename = sampleImage.path;
+    List splitFileName = filename.split("/");
+    String baseName = splitFileName.removeLast();
+    return Container(
+
+        child: Column(
+            children: <Widget>[
+              Image.file(sampleImage, height: 300.0, width: 300.0),
+              RaisedButton(
+                  elevation: 7.0,
+                  child: Text('Upload'),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+
+                  onPressed: () {
+                    final StorageReference firebaseStorageRef = FirebaseStorage
+                        .instance.ref().child(
+                        'Reciepts Images/$name/$baseName');
+
+                    final StorageUploadTask task = firebaseStorageRef.putFile(
+                        sampleImage);
+                    Navigator.of(context).pushNamed('/projectdetails');
+                  }
+              ),
+
+            ])
+
+    );
+  }
 
 }

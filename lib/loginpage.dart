@@ -121,6 +121,7 @@ class _LoginPageState extends State<LoginPage> {
        //Navigator.of(context).pushReplacementNamed('/dashboard');
 
         authorizeAccess(context);
+        //Navigator.pop(context);
       }).catchError((e) {
         print(e);
       });
@@ -236,6 +237,7 @@ final bool isvalidemail = false;
                   ],
                 ),
               ),
+
             ),
             )
           ],

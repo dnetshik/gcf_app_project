@@ -6,8 +6,9 @@ import 'package:upload_image/component/addprojectform.dart' as addProject;
 import 'package:upload_image/services/crud.dart';
 import 'package:intl/intl.dart';
 
-final _formKey = GlobalKey<FormState>();
-var email;
+//the problem was this two global variables makhado, they we're supposed to be inside the class
+//final _formKey = GlobalKey<FormState>();
+////var email;
 
 
 class MyHome extends StatefulWidget {
@@ -16,6 +17,8 @@ class MyHome extends StatefulWidget {
 }
 
 class MyHomeState extends State<MyHome> {
+  final _formKey = GlobalKey<FormState>();
+  var email;
   String ProjectName;
   String Projectdesc;
   double Projectbudget;
@@ -29,6 +32,7 @@ class MyHomeState extends State<MyHome> {
   DateTime _dateTime = new DateTime.now();
   DateTime _Intialdate = new DateTime.now();
   String _dateselected = "";
+  List<String> Obj;
 
   final TextEditingController _controller = new TextEditingController();
 
@@ -137,8 +141,23 @@ class MyHomeState extends State<MyHome> {
                   }
                 },
               ),
+              TextFormField(
+                decoration:
+                const InputDecoration(labelText: 'Project Objectives'),
+                keyboardType: TextInputType.multiline,
+                maxLines: 5,
+                maxLength: 90,
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Enter objectives separated by comma';
+                  } else {
+                    this.Obj = value.split(",");
+                  }
+                },
+              ),
             ],
           )),
+
       new Step(
           title: new Text("User"),
           content: Column(children: <Widget>[
@@ -149,10 +168,18 @@ class MyHomeState extends State<MyHome> {
                   "Assign User:",
                   style: TextStyle(fontSize: 17.5, fontWeight: FontWeight.bold),
                 )),
+
             new StreamBuilder<QuerySnapshot>(
+
                 stream: Firestore.instance.collection('users').snapshots(),
+
                 builder: (context, snapshot) {
+                  print('Am here');
+
+
                   var length = snapshot.data.documents.length;
+                  print(length);
+
                   DocumentSnapshot ds = snapshot.data.documents[length - 1];
                   return new Container(
                       width: 205.0,
@@ -243,7 +270,7 @@ class MyHomeState extends State<MyHome> {
               },
             ),
 
-            Padding(
+            /**Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: RaisedButton(
                 onPressed: () {
@@ -255,9 +282,9 @@ class MyHomeState extends State<MyHome> {
                         SnackBar(content: Text('Processing Data')));
                   }
                 },
-                child: Text('Submit'),
+               // child: Text('Submit'),
               ),
-            ),
+            ),*/
           ]),
           isActive: true)
     ];
@@ -295,6 +322,7 @@ class MyHomeState extends State<MyHome> {
                   // Log function call
                   print("onStepTapped : " + step.toString());
                 },
+
                 onStepCancel: () {
                   // On hitting cancel button, change the state
                   setState(() {
@@ -327,6 +355,7 @@ class MyHomeState extends State<MyHome> {
                         'projectstartdate': this.ProjectStartDate,
                         'projectenddate': this.ProjectEndDate,
                         'numberofempPerproj': this.ProjectEmp,
+                        'objectives': this.Obj,
                       }).then((result) {
                         dialogTrigger(context);
                       }).catchError((e) {
@@ -338,7 +367,8 @@ class MyHomeState extends State<MyHome> {
                   print("onStepContinue : " + current_step.toString());
                 },
               )),
-        ));
+        )
+    );
   }
 }
 
@@ -351,6 +381,7 @@ class ProjectD {
   double Projectbudget;
   String ProjectAdd;
   int ProjectEmp;
+  List<String> Obj;
 
   ProjectD(
       this.ProjectName,
@@ -360,5 +391,6 @@ class ProjectD {
       this.ProjectAdd,
       this.ProjectStartDate,
       this.ProjectEndDate,
-      this.ProjectEmp);
+      this.ProjectEmp,
+      this.Obj);
 }

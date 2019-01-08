@@ -5,7 +5,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'utils/tabs.dart';
-
+import 'package:upload_image/projectdetails.dart';
 
 
 class UploadReceiptsPage extends StatefulWidget {
@@ -30,19 +30,16 @@ class _UploadReceiptsPageState extends State<UploadReceiptsPage> {
       appBar: new AppBar(
         title: new Text('Image Upload'),
         centerTitle: true,
-
-
       ),
       body: new Center(
         child: sampleImage == null ? Text('Select an image') : enableUpload(),
-
 
       ),
 
       floatingActionButton: new FloatingActionButton(
         onPressed: getImage,
         tooltip: 'Add Image',
-        child: new Icon(Icons.add),
+        child: new Icon(Icons.camera_alt),
 
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -66,7 +63,7 @@ class _UploadReceiptsPageState extends State<UploadReceiptsPage> {
 
                   onPressed: () {
                     final StorageReference firebaseStorageRef = FirebaseStorage
-                        .instance.ref().child('Reciepts Images/$baseName');
+                        .instance.ref().child('Reciepts Images/$name/$baseName');
 
                     final StorageUploadTask task = firebaseStorageRef.putFile(
                         sampleImage);

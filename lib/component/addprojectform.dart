@@ -53,7 +53,7 @@ Form addProjectForm(context) {
   }
   ,
   child: Text('Submit')
-  ,
+
   )
   ,
   )

@@ -5,6 +5,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'utils/tabs.dart';
+import 'package:upload_image/projectdetails.dart';
 
 
 
@@ -41,7 +42,7 @@ class _UploadSiteImagesPageState extends State<UploadSiteImagesPage> {
       floatingActionButton: new FloatingActionButton(
         onPressed: getImage,
         tooltip: 'Add Image',
-        child: new Icon(Icons.add),
+        child: new Icon(Icons.camera_alt),
         
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
@@ -64,7 +65,7 @@ class _UploadSiteImagesPageState extends State<UploadSiteImagesPage> {
             color: Colors.blue,
             onPressed: () {
               final StorageReference firebaseStorageRef = FirebaseStorage
-                  .instance.ref().child('Site Images/$baseName');
+                  .instance.ref().child('Site Images/$name/$baseName');
 
               final StorageUploadTask task = firebaseStorageRef.putFile(
                   sampleImage);

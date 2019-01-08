@@ -428,11 +428,11 @@ class _DashboardPage2State extends State<DashboardPage2> {
 
   Widget _ProjectList() {
     if (Projects != null) {
-      int itemcounter = Projects.documents.length ;
+     // int itemcounter = Projects.documents.length ;
       return ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount:  Projects.documents.length   ,
+        itemCount:  Projects.documents.length,
         padding: EdgeInsets.all(5.0),
         itemBuilder: (context, i) {
           return new Column(children: <Widget>[

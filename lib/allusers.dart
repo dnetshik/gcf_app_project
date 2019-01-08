@@ -41,13 +41,13 @@ class _AllUsersPageState extends State<AllUsersPage> {
   Widget _ProjectList() {
 
     if (Projects != null) {
-      print("Proj is: " + Projects.documents.toString());
-      int itemcounter = Projects.documents.length ;
-      print(itemcounter);
+      //print("Proj is: " + Projects.documents.toString());
+      //int itemcounter = Projects.documents.length ;
+     // print(itemcounter);
       return ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount:  Projects.documents.length   ,
+        itemCount:  Projects.documents.length,
         padding: EdgeInsets.all(5.0),
         itemBuilder: (context, i) {
           print("Project2");
