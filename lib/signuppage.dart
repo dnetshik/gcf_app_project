@@ -126,6 +126,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: const InputDecoration(labelText: 'Password'),
                       keyboardType: TextInputType.text,
                       validator: validatePasswordl,
+                      obscureText: true,
                       onSaved: (String val)
                       {
                         _password = val;
