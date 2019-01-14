@@ -785,6 +785,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout tooltip
 mipmap ic_launcher
+mipmap launcher_icon
 string abc_action_bar_home_description
 string abc_action_bar_home_description_format
 string abc_action_bar_home_subtitle_description_format

@@ -9,6 +9,8 @@ import 'utils/addstep.dart';
 import 'projectdetails.dart';
 import 'utils/tabs.dart';
 import 'uploadreciepts.dart';
+import 'splash.dart';
+import 'package:flutter_launcher_icons/android.dart';
 
 void main() => runApp(new MyApp());
 
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
           body2: TextStyle(fontSize: 15.0, fontFamily: 'Hind')
         )
       ),
-      home: new LoginPage(),
+      home: new SplashPage(),
       routes: <String, WidgetBuilder>{
         '/dashboard': (BuildContext context) => new DashboardPage(),
         '/landingpage': (BuildContext context) => new MyApp(),

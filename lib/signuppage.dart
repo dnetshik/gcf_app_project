@@ -29,7 +29,7 @@ class _SignupPageState extends State<SignupPage> {
     Pattern pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = new RegExp(pattern);
-    if (!regex.hasMatch(value))
+    if (!regex.hasMatch(value.replaceAll(new RegExp(r"\s+\b|\b\s"), "")))
         return 'Enter Valid Email';
     else
       return null;
@@ -56,7 +56,7 @@ class _SignupPageState extends State<SignupPage> {
         //print('Signed in ${user.uid}');
         UserManagement().storeNewuser(user, context);
         Navigator.of(context).pop();
-        Navigator.of(context).pushReplacementNamed('/dashboard');
+        Navigator.of(context).pushReplacementNamed('/landingpage');
       }).catchError((e) {
         print("ivlvvliyviv");
       });

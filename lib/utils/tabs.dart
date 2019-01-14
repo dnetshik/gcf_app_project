@@ -36,7 +36,7 @@ class _TabsState extends State<Tabs> {
 
 
 _TabsState() {
-  storage.ref().child('Site Images/IMG-20181212-WA0003.jpg').getData(10000000).then((data) =>
+  storage.ref().child('Site Images/camagru/').getData(10000000).then((data) =>
       setState(() {
         imageBytes = data;
       })
@@ -95,8 +95,7 @@ _TabsState() {
                 children: <Widget>[
            new Container(
              height: 300,
-          child: Center( child:img)
-
+          child: Center( child:sampleImage == null ? Text('No images') : enableUpload(),)
       ),
                   // Icon(Icons.receipt),
                 new FloatingActionButton(

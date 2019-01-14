@@ -6,25 +6,26 @@ INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidMani
 INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:1:1-39:12
 MERGED from [com.android.support:multidex:1.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/f634d0c035620b6a11e2d5f056e23b21/AndroidManifest.xml:17:1-22:12
 MERGED from [:video_player] /goinfre/dnetshik/Desktop/gcf-app/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
-MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-23:12
-MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
-MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
-MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_storage] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_storage/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-10:12
+MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-23:12
+MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-core:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/33c14b7cd7637537228c212b65246632/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.exoplayer:exoplayer-hls:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-hls-2.8.0.aar/ffb3556c1b119ad550f90da511951c0e/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-dash-2.8.0.aar/e806ac1271f2e32d75d6b97d7744a0e7/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-smoothstreaming-2.8.0.aar/f2364ace4e7897c1c6f3cbaa6792e793/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:17:1-26:12
-MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:15:1-25:12
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:15:1-26:12
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:2:1-21:12
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/a898fb21e8765171c9ac15b03816f34a/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:17:1-34:12
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.android.gms:play-services-measurement-api:16.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.2.aar/765640c8ea9182df8e025341ecb19c03/AndroidManifest.xml:17:1-25:12
@@ -42,12 +43,12 @@ MERGED from [com.google.android.gms:play-services-basement:16.0.1] /goinfre/dnet
 MERGED from [com.android.support:support-v4:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/f57108409e52852f1edb76f441d69b5b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/8e7b8df24fe6df1ed8be2745742bf553/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/b2f0d3ed7165e65e760fea939bc8ddf4/AndroidManifest.xml:17:1-28:12
+MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/6eee9988eb9f6d943d835dd11b08a177/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-fragment:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1a09a682f91289c094b5f69d3551ee07/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-utils:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/b98037ec16f650efd5c0aa2fcac85817/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/f5f7ee77893eadd7303cd909bbdcde29/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/075bbffa946f2726bc795a0cd7606a36/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ae5e2ca5c55cb08d737595ca4be450c9/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.0.aar/e2c5650e9189a882f6a2b2b6cf052766/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.3.aar/a1fd6966a71b2b2e5fc6082e5c54493a/AndroidManifest.xml:2:1-9:12
@@ -70,12 +71,12 @@ INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidMani
 		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:8:5-66
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:23:5-67
@@ -94,10 +95,10 @@ MERGED from [com.google.firebase:firebase-core:16.0.4] /goinfre/dnetshik/.gradle
 MERGED from [com.google.firebase:firebase-core:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/33c14b7cd7637537228c212b65246632/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:25:5-29:19
-MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:22:5-36:19
-MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:13:5-19:19
 MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:13:5-19:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:22:5-36:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/a898fb21e8765171c9ac15b03816f34a/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/a898fb21e8765171c9ac15b03816f34a/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:26:5-32:19
@@ -147,7 +148,7 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] /goin
 	android:label
 		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:17:9-37
 	android:icon
-		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:18:9-45
 	android:name
 		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml:16:9-57
 activity#com.gcf.uploadimage.MainActivity
@@ -188,20 +189,22 @@ MERGED from [com.android.support:multidex:1.0.2] /goinfre/dnetshik/.gradle/cache
 MERGED from [com.android.support:multidex:1.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/f634d0c035620b6a11e2d5f056e23b21/AndroidManifest.xml:20:5-43
 MERGED from [:video_player] /goinfre/dnetshik/Desktop/gcf-app/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:video_player] /goinfre/dnetshik/Desktop/gcf-app/build/video_player/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
-MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_storage/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_storage] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_storage/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /goinfre/dnetshik/Desktop/gcf-app/build/cloud_firestore/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_database] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_database/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_search_panel] /goinfre/dnetshik/Desktop/gcf-app/build/flutter_search_panel/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_core/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /goinfre/dnetshik/Desktop/gcf-app/build/firebase_auth/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/33c14b7cd7637537228c212b65246632/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.4.aar/33c14b7cd7637537228c212b65246632/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:21:5-23:78
@@ -214,18 +217,18 @@ MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.0] /goin
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-smoothstreaming-2.8.0.aar/f2364ace4e7897c1c6f3cbaa6792e793/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/a898fb21e8765171c9ac15b03816f34a/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/a898fb21e8765171c9ac15b03816f34a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/8028f50532a90770f22c3009a72a373e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:20:5-44
@@ -260,6 +263,8 @@ MERGED from [com.android.support:animated-vector-drawable:26.1.0] /goinfre/dnets
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/8e7b8df24fe6df1ed8be2745742bf553/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/b2f0d3ed7165e65e760fea939bc8ddf4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/b2f0d3ed7165e65e760fea939bc8ddf4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/6eee9988eb9f6d943d835dd11b08a177/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-media-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/6eee9988eb9f6d943d835dd11b08a177/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-fragment:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/1a09a682f91289c094b5f69d3551ee07/AndroidManifest.xml:21:5-23:60
@@ -270,8 +275,6 @@ MERGED from [com.android.support:support-core-ui:26.1.0] /goinfre/dnetshik/.grad
 MERGED from [com.android.support:support-core-ui:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/f5f7ee77893eadd7303cd909bbdcde29/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/075bbffa946f2726bc795a0cd7606a36/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/075bbffa946f2726bc795a0cd7606a36/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/c4c78a9c3bf49324e1f480b55aab8ec2/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ae5e2ca5c55cb08d737595ca4be450c9/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/ae5e2ca5c55cb08d737595ca4be450c9/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/protolite-well-known-types-16.0.0.aar/e2c5650e9189a882f6a2b2b6cf052766/AndroidManifest.xml:7:5-9:41
@@ -290,6 +293,30 @@ INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidMani
 		INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml
 		ADDED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml
 		INJECTED from /goinfre/dnetshik/Desktop/gcf-app/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.2.aar/33d633837290029ed065449b3d778a97/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:16.2.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.2.aar/33d633837290029ed065449b3d778a97/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from [:connectivity] /goinfre/dnetshik/Desktop/gcf-app/build/connectivity/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:8:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:image_picker] /goinfre/dnetshik/Desktop/gcf-app/build/image_picker/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-80
 	android:name
@@ -340,24 +367,24 @@ MERGED from [com.android.support:support-compat:26.1.0] /goinfre/dnetshik/.gradl
 		ADDED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:28:13-35
 	android:name
 		ADDED from [com.android.support:appcompat-v7:26.1.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/594acddcf2c2e75fac98a1afd9cde3cb/AndroidManifest.xml:27:13-51
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-database:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-database-16.0.3.aar/92b5212169f3ff02d3b5688c117bc98e/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-storage:16.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-storage-16.0.3.aar/94b6f0effb3e7aa36a7abdc2a7480613/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.2.aar/33d633837290029ed065449b3d778a97/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:16.2.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-16.2.2.aar/33d633837290029ed065449b3d778a97/AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:22:5-79
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:14:9-18:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:31:9-35:19
+MERGED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:31:9-35:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:27:9-31:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from [com.google.android.exoplayer:exoplayer-core:2.8.0] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/exoplayer-core-2.8.0.aar/d5a8f0124ce3775a9eeb4d0aae06218e/AndroidManifest.xml:24:22-76
+		ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:14:18-89
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:16:17-111
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:23:9-29:75
 	android:excludeFromRecents
@@ -372,30 +399,12 @@ ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/
 		ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:29:13-72
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:24:13-85
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:31:9-35:19
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:14:9-18:19
-MERGED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:14:9-18:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:27:9-31:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:29:9-35:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.0.3] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-iid-17.0.3.aar/f0f2395aad71607338bcc94afc470a5c/AndroidManifest.xml:31:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:31:18-89
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
 ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:32:13-34:85
 	android:value
 		ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:34:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.0.4.aar/8445bce0d557bdb455b109860972315b/AndroidManifest.xml:33:17-109
-meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:15:13-17:85
-	android:value
-		ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:17:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-firestore:17.1.1] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.1.1.aar/f850df21f0461683fc464c4a24b9cff3/AndroidManifest.xml:16:17-111
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-measurement-connector-impl:17.0.2] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-17.0.2.aar/50a392299a090a80e22bbb109b37900e/AndroidManifest.xml:24:5-68
 MERGED from [com.google.firebase:firebase-analytics:16.0.4] /goinfre/dnetshik/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.4.aar/75714b38ee1c01a60181829e77bf25d0/AndroidManifest.xml:25:5-68

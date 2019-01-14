@@ -14,7 +14,7 @@ class ProjectMedthods
         {
         return false;
         }
-}
+    }
 
 Future<void> addData(ProjectData) async
 {
@@ -48,13 +48,12 @@ getData() async
          // .listen((data) =>
          // data.documents.forEach((doc) => print(doc["proje"])));
     }
-    getSpecificProjData() async
+    Future <QuerySnapshot> getSpecificProjData() async
     {
       //return await Firestore.instance.collection('projects').getDocuments();
       return await Firestore.instance
           .collection('projects')
-          .where("projectname", isEqualTo: util.projectId)
-          .getDocuments();
+          .where("projectname", isEqualTo: util.projectId).getDocuments();
       // .listen((data) =>
       // data.documents.forEach((doc) => print(doc["proje"])));
     }

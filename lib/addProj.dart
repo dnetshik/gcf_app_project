@@ -6,10 +6,12 @@ import 'services/crud.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_sparkline/flutter_sparkline.dart';
 import 'utils/utils.dart' as util;
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'dart:async';
 import 'utils/utils.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'splash3.dart';
 
 class DashboardPage2 extends StatefulWidget {
   @override
@@ -403,22 +405,39 @@ class _DashboardPage2State extends State<DashboardPage2> {
           title: Text('All GCF Projects'),
           backgroundColor: Theme.of(context).backgroundColor,
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.add),
+//            IconButton(
+//              icon: Icon(Icons.add),
+//              onPressed: () {
+//                addDialog(context);
+//              },
+//            ),
+//            IconButton(
+////              icon: Icon(Icons.refresh),
+////              onPressed: () {
+////                ProjectObj.getData().then((results) {
+////                  setState(() {
+////                    Projects = results;
+////                  });
+////                });
+////              },
+////
+////
+////            )
+            new OutlineButton(
+//              borderSide: BorderSide(
+//                  color: Colors., style: BorderStyle.solid, width: 3.0),
+            color: Colors.green,
+              child: Text('Logout'),
               onPressed: () {
-                addDialog(context);
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.refresh),
-              onPressed: () {
-                ProjectObj.getData().then((results) {
-                  setState(() {
-                    Projects = results;
-                  });
+                FirebaseAuth.instance.signOut().then((action) {
+                  Navigator
+                      .of(context)
+                      .pushReplacementNamed('/landingpage');
+                }).catchError((e) {
+                  print(e);
                 });
               },
-            )
+            ),
           ],
         ),
         drawer: addDrawer(context),
@@ -478,7 +497,10 @@ class _DashboardPage2State extends State<DashboardPage2> {
 //                          new MaterialPageRoute(
 //                              builder: (context) => ProjectDetails(
 //                                  Projects.documents[i].data[i])));
-                      Navigator.of(context).pushNamed('/projectdetails');
+                     // Navigator.of(context).pushNamed('/SplashPage3');
+                      Navigator.of(context).push(
+                          new MaterialPageRoute(
+                              builder: (BuildContext context) => SplashPage3()));
 
                     })),
               ),

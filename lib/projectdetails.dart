@@ -13,6 +13,8 @@ import 'package:firebase_database/firebase_database.dart';
 
 var name;
 
+QuerySnapshot Projects;
+
 class ProjectDetailsPage extends StatefulWidget {
   @override
   _ProjectDetailsPageState createState() => _ProjectDetailsPageState();
@@ -21,7 +23,8 @@ class ProjectDetailsPage extends StatefulWidget {
 class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 //  final ProjectD proj;
 
-  QuerySnapshot Projects;
+
+
 
 
   ProjectMedthods ProjectObj = new ProjectMedthods();
@@ -31,27 +34,53 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 
   @override
   void initState() {
-    ProjectObj.getSpecificProjData().then((results) {
-      setState(() {
-        Projects =  results;
 
+    if (Projects != null){
+      ProjectObj.getSpecificProjData().then((results) {
+        setState(() {
+          Projects = results;
+        });
       });
-    });
+
+//    super.initState();
+  }
+  else if(Projects == null){
+      ProjectObj.getSpecificProjData().then((results) {
+        setState(() {
+          Projects = results;
+        });
+      });
 
     super.initState();
+    }
+    else
+      print('error');
+    super.initState();
+    print(Projects.toString());
   }
+
   @override
   Widget build(BuildContext context) {
+    var getprojname;
+    var getprojdesc;
+    var numberofempperproj;
+    var projectmanger;
+    var projectbudget;
+    if (Projects.documents != null) {
 
-       var getprojname =  Projects.documents[0].data['projectname'];
 
-       var getprojdesc =  Projects.documents[0].data['projectdesc'];
 
-       var numberofempperproj =  Projects.documents[0].data['numberofempPerproj'].toString();
 
-       var projectmanger =  Projects.documents[0].data['projectmanager'];
 
-       var projectbudget = Projects.documents[0].data['projectbudget'].toString();
+       getprojname =  Projects.documents[0].data['projectname'];
+
+        getprojdesc =  Projects.documents[0].data['projectdesc'];
+
+     numberofempperproj =  Projects.documents[0].data['numberofempPerproj'].toString();
+
+        projectmanger =  Projects.documents[0].data['projectmanager'];
+
+       projectbudget = Projects.documents[0].data['projectbudget'].toString();
 
        name = getprojname;
 
@@ -60,69 +89,70 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 
       // TODO: implement build
 
-      return Scaffold(
-          appBar: AppBar(
-            // title: Text('Project details'),
-            elevation: 2.0,
-            backgroundColor: Colors.white,
+         return Scaffold(
+             appBar: AppBar(
+               // title: Text('Project details'),
+               elevation: 2.0,
+               backgroundColor: Colors.white,
 
-            title: Text(getprojname, style: TextStyle(color: Colors.black,
-                fontWeight: FontWeight.w700,
-                fontSize: 19.0)),
-            actions: <Widget>
-            [
-              Container
-                (
-                margin: EdgeInsets.only(right: 8.0),
-                child: Row
-                  (
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  /*children: <Widget>
+               title: Text(getprojname, style: TextStyle(color: Colors.black,
+                   fontWeight: FontWeight.w700,
+                   fontSize: 19.0)),
+               actions: <Widget>
+               [
+                 Container
+                   (
+                   margin: EdgeInsets.only(right: 8.0),
+                   child: Row
+                     (
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     crossAxisAlignment: CrossAxisAlignment.center,
+                     /*children: <Widget>
                   [
                     Text('beclothed.com', style: TextStyle(color: Colors.blue,
                         fontWeight: FontWeight.w700,
                         fontSize: 14.0)),
                     Icon(Icons.arrow_drop_down, color: Colors.black54)
                   ],*/
-                ),
-              )
-            ],
-          ),
-          body: StaggeredGridView.count(
-            crossAxisCount: 2,
-            crossAxisSpacing: 12.0,
-            mainAxisSpacing: 12.0,
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            children: <Widget>[
-              _buildTile(
-                Padding
-                  (
-                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
-                  child: Row
-                    (
+                   ),
+                 )
+               ],
+             ),
+             body: StaggeredGridView.count(
+               crossAxisCount: 2,
+               crossAxisSpacing: 12.0,
+               mainAxisSpacing: 12.0,
+               padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+               children: <Widget>[
+                 _buildTile(
+                   Padding
+                     (
+                     padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+                     child: Row
+                       (
 
 //                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //                    crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>
-                      [
-                        Container(
-                            width: 240.0,
-                            child: Column
-                              (
+                         children: <Widget>
+                         [
+                           Container(
+                               width: 240.0,
+                               child: Column
+                                 (
 
 //                        mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>
-                              [
-                                Text('Description', style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.0,), maxLines: 4,),
-                                Text(getprojdesc,
-                                    style: TextStyle(color: Colors.blueAccent)),
-                              ],
-                            )),
+                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                 children: <Widget>
+                                 [
+                                   Text('Description', style: TextStyle(
+                                     color: Colors.black,
+                                     fontWeight: FontWeight.w700,
+                                     fontSize: 12.0,), maxLines: 4,),
+                                   Text(getprojdesc,
+                                       style: TextStyle(
+                                           color: Colors.blueAccent)),
+                                 ],
+                               )),
 //                      Material
 //                        (
 //                          color: Colors.blue,
@@ -136,19 +166,19 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 //                              )
 //                          )
 //                      )
-                      ]
-                  ),
-                ),
-              ),
-              _buildTile(
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column
-                    (
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>
-                      [
+                         ]
+                     ),
+                   ),
+                 ),
+                 _buildTile(
+                   Padding(
+                     padding: const EdgeInsets.all(10.0),
+                     child: Column
+                       (
+                         mainAxisAlignment: MainAxisAlignment.start,
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: <Widget>
+                         [
 //                      Material
 //                        (
 //                          color: Colors.teal,
@@ -159,107 +189,109 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 //                            child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
 //                          )
 //                      ),
-                        Text("Employees Details:", style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12.0)),
-                        Padding(padding: EdgeInsets.only(bottom: 7.5)),
+                           Text("Employees Details:", style: TextStyle(
+                               color: Colors.black,
+                               fontWeight: FontWeight.w700,
+                               fontSize: 12.0)),
+                           Padding(padding: EdgeInsets.only(bottom: 7.5)),
 
-                        Row(children: <Widget>[
-                          Icon(Icons.person, color: Colors.green,),
-                          Text(projectmanger, style: TextStyle(
-                              color: Colors.blueAccent, fontSize: 12.0)),
-                        ],),
-                        Padding(padding: EdgeInsets.only(bottom: 3.5)),
+                           Row(children: <Widget>[
+                             Icon(Icons.person, color: Colors.green,),
+                             Text(projectmanger, style: TextStyle(
+                                 color: Colors.blueAccent, fontSize: 12.0)),
+                           ],),
+                           Padding(padding: EdgeInsets.only(bottom: 3.5)),
 
-                        Row(children: <Widget>[
-                          Icon(Icons.people, color: Colors.green,),
-                          Text(numberofempperproj,
-                              style: TextStyle(color: Colors.blueAccent)),
-                        ]),
+                           Row(children: <Widget>[
+                             Icon(Icons.people, color: Colors.green,),
+                             Text(numberofempperproj,
+                                 style: TextStyle(color: Colors.blueAccent)),
+                           ]),
 //                      Padding(padding: EdgeInsets.only(bottom: 16.0)),
 //                      Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
 
 
-                        Padding(padding: EdgeInsets.only(bottom: 10.5)),
-                        Text("Project Cost:", style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12.0)),
-                        Padding(padding: EdgeInsets.only(bottom: 7.5)),
+                           Padding(padding: EdgeInsets.only(bottom: 10.5)),
+                           Text("Project Cost:", style: TextStyle(
+                               color: Colors.black,
+                               fontWeight: FontWeight.w700,
+                               fontSize: 12.0)),
+                           Padding(padding: EdgeInsets.only(bottom: 7.5)),
 
-                        Row(children: <Widget>[
-                          Icon(
-                            Icons.monetization_on, color: Colors.amber[800],),
-                          Text(projectbudget, style: TextStyle(
-                              color: Colors.blueAccent,
-                              fontSize: 12.0,
-                              fontWeight: FontWeight.w700)),
-                        ],),
+                           Row(children: <Widget>[
+                             Icon(
+                               Icons.monetization_on,
+                               color: Colors.amber[800],),
+                             Text(projectbudget, style: TextStyle(
+                                 color: Colors.blueAccent,
+                                 fontSize: 12.0,
+                                 fontWeight: FontWeight.w700)),
+                           ],),
 
-                      ]
-                  ),
-                ),
-              ),
-              _buildTile(
-                Padding
-                  (
-                  padding: const EdgeInsets.all(24.0),
-                  child: Column
-                    (
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>
-                      [
-                        Material
-                          (
-                            color: Colors.amber,
-                            shape: CircleBorder(),
-                            child: Padding
-                              (
-                              padding: EdgeInsets.all(16.0),
-                              child: Icon(
-                                  Icons.notifications, color: Colors.white,
-                                  size: 30.0),
-                            )
-                        ),
-                        Padding(padding: EdgeInsets.only(bottom: 16.0)),
-                        Text('Alerts', style: TextStyle(color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 24.0)),
-                        Text('All ', style: TextStyle(color: Colors.black45)),
-                      ]
-                  ),
-                ),
-              ),
-              _buildTile(
-                Padding
-                  (
-                    padding: const EdgeInsets.all(24.0),
-                    child: Column
-                      (
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>
-                      [
-                        Row
-                          (
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>
-                          [
-                            Column
-                              (
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>
-                              [
-                                Text('Objectives',
-                                    style: TextStyle(color: Colors.green)),
-                                Text('\$16K', style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 34.0)),
+                         ]
+                     ),
+                   ),
+                 ),
+                 _buildTile(
+                   Padding
+                     (
+                     padding: const EdgeInsets.all(24.0),
+                     child: Column
+                       (
+                         mainAxisAlignment: MainAxisAlignment.start,
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: <Widget>
+                         [
+                           Material
+                             (
+                               color: Colors.amber,
+                               shape: CircleBorder(),
+                               child: Padding
+                                 (
+                                 padding: EdgeInsets.all(16.0),
+                                 child: Icon(
+                                     Icons.notifications, color: Colors.white,
+                                     size: 30.0),
+                               )
+                           ),
+                           Padding(padding: EdgeInsets.only(bottom: 16.0)),
+                           Text('Alerts', style: TextStyle(color: Colors.black,
+                               fontWeight: FontWeight.w700,
+                               fontSize: 24.0)),
+                           Text(
+                               'All ', style: TextStyle(color: Colors.black45)),
+                         ]
+                     ),
+                   ),
+                 ),
+                 _buildTile(
+                   Padding
+                     (
+                       padding: const EdgeInsets.all(24.0),
+                       child: Column
+                         (
+                         mainAxisAlignment: MainAxisAlignment.start,
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: <Widget>
+                         [
+                           Row
+                             (
+                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             children: <Widget>
+                             [
+                               Column
+                                 (
+                                 mainAxisAlignment: MainAxisAlignment.start,
+                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                 children: <Widget>
+                                 [
+                                   Text('Objectives',
+                                       style: TextStyle(color: Colors.green)),
+                                   Text('\$16K', style: TextStyle(
+                                       color: Colors.black,
+                                       fontWeight: FontWeight.w700,
+                                       fontSize: 34.0)),
 //                                Checkbox(value: _test,
 //                                    onChanged: (bool tester){
 //                                      setState(() {
@@ -269,9 +301,9 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
 //                                )
 
 
-                              ],
-                            ),
-                            /*DropdownButton
+                                 ],
+                               ),
+                               /*DropdownButton
                       (
                         isDense: true,
                         value: actualDropdown,
@@ -289,72 +321,78 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
                           );
                         }).toList()
                     )*/
-                          ],
-                        ),
-                        Padding(padding: EdgeInsets.only(bottom: 4.0)),
+                             ],
+                           ),
+                           Padding(padding: EdgeInsets.only(bottom: 4.0)),
 //                Sparkline
 //                  (
 //                //  data: charts[actualChart],
 //                  lineWidth: 5.0,
 //                  lineColor: Colors.greenAccent,
 //                )
-                      ],
-                    )
-                ),
-              ),
-              _buildTile(
-                Padding
-                  (
-                  padding: const EdgeInsets.all(24.0),
-                  child: Row
-                    (
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>
-                      [
-                        Column
-                          (
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>
-                          [
-                            Text('Upload Reciepts Pictures',
-                                style: TextStyle(color: Colors.blueAccent)),
-                            //Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
-                          ],
-                        ),
-                        Material
-                          (
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(24.0),
-                            child: Center
-                              (
-                                child: Padding
-                                  (
-                                  padding: EdgeInsets.all(16.0),
-                                  child: Icon(Icons.image, color: Colors.white,
-                                      size: 30.0),
-                                )
-                            )
-                        )
-                      ]
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pushNamed('/tabs');
-                },
-                //  => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage()))
-              )
-            ],
-            staggeredTiles: [
-              StaggeredTile.extent(2, 110.0),
-              StaggeredTile.extent(1, 180.0),
-              StaggeredTile.extent(1, 180.0),
-              StaggeredTile.extent(2, 220.0),
-              StaggeredTile.extent(2, 110.0),
-            ],
-          )
-      );
+                         ],
+                       )
+                   ),
+                 ),
+                 _buildTile(
+                   Padding
+                     (
+                     padding: const EdgeInsets.all(24.0),
+                     child: Row
+                       (
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         crossAxisAlignment: CrossAxisAlignment.center,
+                         children: <Widget>
+                         [
+                           Column
+                             (
+                             mainAxisAlignment: MainAxisAlignment.center,
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             children: <Widget>
+                             [
+                               Text('Upload Reciepts Pictures',
+                                   style: TextStyle(color: Colors.blueAccent)),
+                               //Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                             ],
+                           ),
+                           Material
+                             (
+                               color: Colors.red,
+                               borderRadius: BorderRadius.circular(24.0),
+                               child: Center
+                                 (
+                                   child: Padding
+                                     (
+                                     padding: EdgeInsets.all(16.0),
+                                     child: Icon(
+                                         Icons.image, color: Colors.white,
+                                         size: 30.0),
+                                   )
+                               )
+                           )
+                         ]
+                     ),
+                   ),
+                   onTap: () {
+                     Navigator.of(context).pushNamed('/tabs');
+                   },
+                   //  => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage()))
+                 )
+               ],
+               staggeredTiles: [
+                 StaggeredTile.extent(2, 110.0),
+                 StaggeredTile.extent(1, 180.0),
+                 StaggeredTile.extent(1, 180.0),
+                 StaggeredTile.extent(2, 220.0),
+                 StaggeredTile.extent(2, 110.0),
+               ],
+             )
+         );
+       }
+       else
+         {
+          return Text("please man");
+         }
 
   }
   Widget _buildTile(Widget child, {Function() onTap}) {

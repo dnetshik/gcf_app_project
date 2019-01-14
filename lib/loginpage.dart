@@ -9,6 +9,7 @@ import 'addProj.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:email_validator/email_validator.dart';
 import 'utils/utils.dart' as util;
+import 'splash2.dart';
 
 
 authorizeAccess(BuildContext context) {
@@ -21,7 +22,7 @@ authorizeAccess(BuildContext context) {
         if (docs.documents[0].data['role'] == 'admin') {
           Navigator.of(context).push(
               new MaterialPageRoute(
-                  builder: (BuildContext context) => DashboardPage2()));
+                  builder: (BuildContext context) => SplashPage2()));
         }
         else if(docs.documents[0].data['role'] == 'user') {
           util.currentuseremail = docs.documents[0].data['email'];
@@ -90,7 +91,7 @@ String validateEmail(String value) {
   Pattern pattern =
       r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
   RegExp regex = new RegExp(pattern);
-  if (!regex.hasMatch(value))
+  if (!regex.hasMatch(value.replaceAll(new RegExp(r"\s+\b|\b\s"), "")))
     return 'Enter Valid Email';
   else
     return null;
@@ -111,23 +112,33 @@ class _LoginPageState extends State<LoginPage> {
     return false;
   }
 
+
+
+
   loginUser() {
+
     if (checkFields()) {
       //Perform Login
+     // _progressBarActive == true?const CircularProgressIndicator():
       FirebaseAuth.instance
           .signInWithEmailAndPassword(email: _email, password: _password)
           .then((user) {
         print('Signed in as ${user.uid}');
-       //Navigator.of(context).pushReplacementNamed('/dashboard');
+        //Navigator.of(context).pushReplacementNamed('/dashboard');
 
         authorizeAccess(context);
+
         //Navigator.pop(context);
       }).catchError((e) {
         print(e);
       });
     }
+
   }
 final bool isvalidemail = false;
+
+
+ // _progressBarActive == true?const CircularProgressIndicator():new Container());
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -139,6 +150,7 @@ final bool isvalidemail = false;
         child: ListView(
 
           shrinkWrap: true,
+
           children: <Widget>[
 
             new Center(
@@ -206,10 +218,12 @@ final bool isvalidemail = false;
                           height: 40.0,
                           onPressed: loginUser,
                           color: Theme.of(context).buttonColor,
-                          child: Text(
+
+                          child:  Text(
                             'Log In',
                             style: new TextStyle(color: Colors.white),
-                          ),
+                          )
+                           // Text(errorMsg != null ? errorMsg : "Loading...");
                         ),
                       ),
                     ),

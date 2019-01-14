@@ -171,7 +171,7 @@ class MyHomeState extends State<MyHome> {
 
             new StreamBuilder<QuerySnapshot>(
 
-                stream: Firestore.instance.collection('users').snapshots(),
+                stream:  Firestore.instance.collection('users').snapshots(),
 
                 builder: (context, snapshot) {
                   print('Am here');
