@@ -491,6 +491,7 @@ class _DashboardPage2State extends State<DashboardPage2> {
                     trailing: Icon(Icons.arrow_forward_ios),
                     onTap: () {
                       //Navigator.of(context).pop();
+
                       util.projectId =  Projects.documents[i].data['projectname'];
 //                      Navigator.push(
 //                          context,

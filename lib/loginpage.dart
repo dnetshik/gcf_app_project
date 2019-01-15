@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:upload_image/splashuser.dart';
 import 'adminpage.dart';
 import 'allusers.dart';
 import 'services/usermangement.dart';
@@ -28,7 +29,7 @@ authorizeAccess(BuildContext context) {
           util.currentuseremail = docs.documents[0].data['email'];
           Navigator.of(context).push(
               new MaterialPageRoute(
-                  builder: (BuildContext context) => AllUsersPage()));
+                  builder: (BuildContext context) => Splashuser()));
         }
         else
           {

@@ -11,6 +11,8 @@ import 'utils/tabs.dart';
 import 'uploadreciepts.dart';
 import 'splash.dart';
 import 'package:flutter_launcher_icons/android.dart';
+//import 'projectuserdet.dart';
+import 'package:upload_image/user/projectSpecDetails.dart';
 
 void main() => runApp(new MyApp());
 
@@ -44,6 +46,8 @@ class MyApp extends StatelessWidget {
         '/projectdetails': (BuildContext context) => new ProjectDetailsPage(),
         '/tabs': (BuildContext context) => new Tabs(),
         '/uploadreciepts': (BuildContext context) => new UploadReceiptsPage(),
+        '/projectSpecDetails': (BuildContext context) => new UserPage(),
+
 
       },
     );

@@ -29,14 +29,17 @@ class _TabsState extends State<Tabs> {
 
   final FirebaseStorage storage = FirebaseStorage(
       app: Firestore.instance.app,
-      storageBucket: 'gs://userlogin-12f9f.appspot.com');
+      storageBucket: 'gs://userlogin-12f9f.appspot.com');  //gs://userlogin-12f9f.appspot.com/Reciepts Images
 
   Uint8List imageBytes;
   String errorMsg;
 
 
 _TabsState() {
-  storage.ref().child('Site Images/camagru/').getData(10000000).then((data) =>
+
+  String filename = 'gs://userlogin-12f9f.appspot.com/Reciepts Images/';
+
+  storage.ref().child(filename).getData(10000000).then((data) =>
       setState(() {
         imageBytes = data;
       })
@@ -56,6 +59,7 @@ _TabsState() {
 
   @override
   Widget build(BuildContext context) {
+
 
     var img = imageBytes != null ? Image.memory(
       imageBytes,
@@ -95,7 +99,7 @@ _TabsState() {
                 children: <Widget>[
            new Container(
              height: 300,
-          child: Center( child:sampleImage == null ? Text('No images') : enableUpload(),)
+          child: Center( child: img,)
       ),
                   // Icon(Icons.receipt),
                 new FloatingActionButton(

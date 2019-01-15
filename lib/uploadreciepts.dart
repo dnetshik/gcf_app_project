@@ -24,6 +24,7 @@ class _UploadReceiptsPageState extends State<UploadReceiptsPage> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -62,11 +63,13 @@ class _UploadReceiptsPageState extends State<UploadReceiptsPage> {
                   color: Colors.blue,
 
                   onPressed: () {
-                    final StorageReference firebaseStorageRef = FirebaseStorage
-                        .instance.ref().child('Reciepts Images/$name/$baseName');
+//                    final StorageReference firebaseStorageRef = FirebaseStorage
+//                        .instance.ref().child('Reciepts Images/$name/$baseName');
 
-                    final StorageUploadTask task = firebaseStorageRef.putFile(
-                        sampleImage);
+//                    final StorageUploadTask task = firebaseStorageRef.putFile(
+//                        sampleImage);
+                    var dwnurl =
+
                     Navigator.of(context).pushNamed('/projectdetails');
                   }
               ),
@@ -74,4 +77,9 @@ class _UploadReceiptsPageState extends State<UploadReceiptsPage> {
             ])
 
     );}
+
+
+
+
 }
+

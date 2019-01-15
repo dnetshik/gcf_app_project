@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:upload_image/splashuser.dart';
+import 'package:upload_image/user/projectSpecDetails.dart';
 import 'addProj.dart';
 import 'services/crud.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'utils/utils.dart' as util;
 
 class AllUsersPage extends StatefulWidget {
   @override
@@ -31,7 +34,7 @@ class _AllUsersPageState extends State<AllUsersPage> {
       appBar: AppBar(
         title: Text('Users'),
       ),
-
+        drawer: util.addDrawer2(context),
         body: _ProjectList(),
     );
   }
@@ -80,13 +83,11 @@ class _AllUsersPageState extends State<AllUsersPage> {
                     subtitle: Text(Projects.documents[i].data['projectdesc'], maxLines: 3,),
                     trailing: Icon(Icons.arrow_forward_ios),
                     onTap: () {
-
+                      util.projectId =  Projects.documents[i].data['projectname'];
                       //Navigator.of(context).pop();
-                      Navigator.push(
-                          context,
+                      Navigator.of(context).push(
                           new MaterialPageRoute(
-                              builder: (context) => ProjectDetails(
-                                  Projects.documents[i].data[i])));
+                              builder: (BuildContext context) => UserPage()));
                     }),
               ),
             ),

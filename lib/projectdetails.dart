@@ -13,6 +13,7 @@ import 'package:firebase_database/firebase_database.dart';
 
 var name;
 
+
 QuerySnapshot Projects;
 
 class ProjectDetailsPage extends StatefulWidget {
@@ -59,6 +60,20 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
     print(Projects.toString());
   }
 
+  bool _checkbox = false;
+  bool _checked = false;
+
+  bool _something() {
+    setState(() {
+      if (_checkbox == false)
+        _checkbox = !_checked;
+      else {
+        _checkbox = _checked;
+        print("changed");
+      }
+    });
+     return _checkbox;
+  }
   @override
   Widget build(BuildContext context) {
     var getprojname;
@@ -66,29 +81,24 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
     var numberofempperproj;
     var projectmanger;
     var projectbudget;
+
+    var projectobj;
+
+    name = getprojname;
+
+
+
     if (Projects.documents != null) {
 
-
-
-
-
        getprojname =  Projects.documents[0].data['projectname'];
-
-        getprojdesc =  Projects.documents[0].data['projectdesc'];
-
-     numberofempperproj =  Projects.documents[0].data['numberofempPerproj'].toString();
-
-        projectmanger =  Projects.documents[0].data['projectmanager'];
-
+       getprojdesc =  Projects.documents[0].data['projectdesc'];
+       numberofempperproj =  Projects.documents[0].data['numberofempPerproj'].toString();
+       projectmanger =  Projects.documents[0].data['projectmanager'];
        projectbudget = Projects.documents[0].data['projectbudget'].toString();
-
+       projectobj = Projects.documents[0].data['objectives'];
        name = getprojname;
 
-
-
-
       // TODO: implement build
-
          return Scaffold(
              appBar: AppBar(
                // title: Text('Project details'),
@@ -288,10 +298,34 @@ class _ProjectDetailsPageState extends State<ProjectDetailsPage> {
                                  [
                                    Text('Objectives',
                                        style: TextStyle(color: Colors.green)),
-                                   Text('\$16K', style: TextStyle(
-                                       color: Colors.black,
-                                       fontWeight: FontWeight.w700,
-                                       fontSize: 34.0)),
+                     SizedBox(
+                                 width: 326,
+                       height: 127,
+                       child: ListView.builder(
+                           padding:
+                           EdgeInsets.symmetric(vertical: 5.0),
+                           scrollDirection: Axis.vertical,
+
+//                                      reverse: false,
+//                                      primary: true,
+                           itemCount: projectobj.length,
+                           itemBuilder: (BuildContext context,
+                               int index) =>
+                               Row(children: <Widget>[
+                                 Padding(
+                                     padding: EdgeInsets.only(left: 5.0)),
+                                 Checkbox(
+                                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                     activeColor: Colors.green,
+                                     value: _checkbox,
+                                     onChanged: (bool e ) => _something()),
+                                 Text(
+                                     "${projectobj[index].toString()}")
+                               ])
+//                                    itemBuilder: (BuildContext context, int index) =>  Text("${projectobj[index].toString()}")
+
+                       ),
+                     ),
 //                                Checkbox(value: _test,
 //                                    onChanged: (bool tester){
 //                                      setState(() {
